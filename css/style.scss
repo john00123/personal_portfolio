@@ -1,0 +1,150 @@
+//Comment for compiler
+@import url('https://rsms.me/inter/inter-ui.css');
+@import url('https://fonts.googleapis.com/css?family=Abhaya+Libre:400,500');
+
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter UI var alt', sans-serif; }
+}
+
+
+html{
+  --main-animation: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  --main-font: 'Inter UI', sans-serif;
+  --main-bg-color: rgb(255, 254, 242);
+  --font-color: rgb(51, 51, 51);
+  font-family: var(--main-font);
+  color: var(--font-color);
+  text-rendering: optimizeLegibility !important;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased !important;
+  transition: color var(--main-animation);
+}
+
+
+h1{
+  line-height: 1.2!important;
+}
+
+p{ font-size: 15px}
+
+li{
+  font-weight: 500;
+}
+[alt]{
+  font-family: 'Abhaya Libre', serif;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+
+body{
+  background: var(--main-bg-color);
+  min-height: 100vh;
+  margin: auto;
+  padding: 30px;
+  transition: background var(--main-animation);
+}
+
+nav{
+  transition: background var(--main-animation);
+}
+
+.menu{
+  background: var(--main-bg-color);
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top:0;
+  left: 0;
+}
+
+.progress{
+  height: 1px;
+  width: 0;
+  background-color: var(--font-color);
+  border: none;
+  transform: translateY(8px);
+  transition: transform --var(--main-animation);
+}
+
+.compress{
+  display: flex;
+  margin: auto;
+  max-width: 980px;
+
+  padding: 10px 30px;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform var(--main-animation);
+
+  ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  li{
+    margin-left: 20px;
+    position: relative;
+    font-size: 14px;
+
+    &:before{
+      position: absolute;
+      content: '';
+      bottom: 1px;
+      left: 0;
+      height: 1px;
+      width: 0%;
+      transition: width var(--main-animation);
+      background-color: var(--main-bg-color);
+    }
+
+    &:after{
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 0%;
+      transition: width var(--main-animation);
+      background-color: black;
+    }
+    &:hover{
+      cursor: pointer;
+    }
+    &:hover:after, &:hover:before{
+      width: 100%;
+    }
+  }
+}
+
+article{
+  max-width: 980px;
+  margin: auto;
+  margin-top: 80px;
+}
+
+.grid{
+  width: 100%;
+  display: flex;
+}
+
+.card{
+  background-color: red;
+  height: 200px;
+  width: auto;
+}
+.badge{
+  cursor: pointer;
+}
+.dark-text{
+  color:var(--main-bg-color);
+}
+.dark-body{
+  background-color: black;
+}
+
+.nav-up{
+  transform: translate3d(0, -200px,0);
+}
