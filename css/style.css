@@ -25,6 +25,7 @@ h1 {
 
 p {
   font-size: 15px;
+  max-width: 80ch;
 }
 
 li {
@@ -61,8 +62,11 @@ nav {
 
 .progress {
   height: 1px;
+  position: fixed;
+  top: 60px;
   width: 0;
   background-color: var(--font-color);
+  opacity: 0.2;
   border: none;
   transform: translateY(8px);
   transition: transform --var(--main-animation);
@@ -71,7 +75,7 @@ nav {
 .compress {
   display: flex;
   margin: auto;
-  max-width: 980px;
+  max-width: 800px;
   padding: 10px 30px;
   align-items: center;
   justify-content: space-between;
@@ -121,7 +125,7 @@ nav {
 }
 
 article {
-  max-width: 980px;
+  max-width: 800px;
   margin: auto;
   margin-top: 80px;
 }
@@ -147,6 +151,10 @@ article {
 
 .dark-body {
   background-color: black;
+}
+
+.dark-progress {
+  background-color: var(--main-bg-color);
 }
 
 .nav-up {
