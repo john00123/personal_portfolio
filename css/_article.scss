@@ -1,0 +1,23 @@
+//main:style.scss
+
+.title{
+  margin-bottom: 0;
+  margin-left: -2pt;
+}
+
+.description{ color: $grey400 }
+
+article > p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+quote{
+  color:$grey600;
+  padding: 20px 0;
+}
+
+figcaption{
+  color: $grey400;
+  margin: 8pt 0 0 0;
+}

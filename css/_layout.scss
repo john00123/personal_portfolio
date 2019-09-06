@@ -1,0 +1,18 @@
+//main:style.scss
+
+@mixin flex($align:'center', $justify:'center',$orientation:'column'){
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $orientation;
+}
+
+//horizontal
+[layout='◨']{ @include flex(center, flex-start, row)}
+[layout='◫']{ @include flex(center, space-between, row)}
+[layout='⎅']{ @include flex(flex-start, space-between, row)}
+
+//vertical
+[layout='◰']{ @include flex(flex-start, space-between, column)}
+[layout='⊟']{ @include flex(flex-start, center, column)}
+[layout='⊡']{ @include flex(center, center, column)}
