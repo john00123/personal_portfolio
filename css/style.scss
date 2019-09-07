@@ -33,12 +33,12 @@ aside{
   p{ margin-top: 0;}
 }
 
-figure{
+figure, .block{
   width: 100%;
   margin: 0;
 }
 
-img, video {
+img, video, .block {
   border-radius: 4pt;
   background-color: $grey200;
 }
@@ -68,5 +68,30 @@ hr{
   color: $grey900;
   margin-bottom: 20px;
   width: 100%;
+  box-sizing: border-box;
+}
+
+
+.sq{
+  height: 40pt;
+  width: 40pt;
+  background-color: lavender;
+  margin-right: 16pt;
+}
+
+.text{
+  flex-grow: 1;
+  h3, p{margin: 0;}
+}
+.block{
+  height: 400px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.small-card{
+  background-color: white;
+  border-radius: 4pt;
+  padding: 16pt 16pt;
+  width: 60%;
   box-sizing: border-box;
 }
