@@ -1,0 +1,132 @@
+<DOCTYPE html>
+<html>
+<head>
+  <title>John Torres</title>
+  <meta name="description" content="I'm lead digital product designer with experience growing design in an organization with a passion on finding ways design can be used to solve problems. ">
+  <link rel="stylesheet" href="/css/style.min.css">
+</head>
+<body>
+  <main layout='⎅'>
+    <article layout='◰'>
+      <h1 class='title'>Smart Bezel</h1>
+      <p class='description'>Improving server configuration and device/system comunication at Nutanix.<br>
+        <br>Intelligent node faceplate and server rack mapping<br> U.S. Application No. 16/211,054
+      </p>
+
+      <div class='notification'>
+        ☞ &nbsp; This project is in patent pending status, some details are still be under standard NDA
+      </div>
+
+
+      <figure>
+        <img alt="Picture of a server room with plugged devices" class='article-image' src='/img/bezel.png' width="100%" />
+        <figcaption>Bezel Render - Industrial Design by Ken Chen</figcaption>
+      </figure>
+      <br>
+      <p>
+      In 2015 I had the opportunity to explore design solutions outside of our product portfolio, Nutanix Smart Bezel was the result of that exercise. At its core this faceplate was designed to allow communication between the server infrastructure and Nutanix management platform (Prism). </p>
+
+      <h3>The problem</h3>
+
+
+      <p>
+      The complete hardware installation process is fragmented across several interfaces today. Admins need to manually keep track on the inventory and the state of each piece of hardware through an excell sheet. Imaging happens through Nutanix Foundation platform and registration happens through Prism. If there are inconsistencies in the data, validation happens manually.
+      </p>
+
+      <p>
+      In cases of hardware performance issues, datacenter admins in some cases rely on second hand information in order to pin point a malfunctioning devices.
+      </p>
+
+      <p>
+      Both cases showcase a time consuming experience that naturally leads to human mistakes.
+      </p>
+
+
+
+      <figure>
+        <img alt="Picture of a server room with plugged devices" class='article-image' src='/img/admin.jpg' width="100%" />
+        <figcaption>Victor our datacenter admin talking to our team</figcaption><br>
+      </figure>
+
+
+      <h3>Why a faceplate</h3>
+
+      <p>Nutanix was originally providing on premise solutions, that meant that no communication outside the datacenter for security reasons. Some companies use barcodes, but this solution requires dedicated hardware and systems.
+
+        In order to be able to establish a channel we needed a device connected to the local network and some basic registration information from the hardware encoded in a nfs plate. Most phones are able to read data from NFR sensors so creating a companion app was part of the initial concept. </p>
+
+      <br>
+      <figure>
+        <video controls="controls" width="100%" height="auto"
+       name="Video Name" src="/vid/bezel.mov"></video>
+        <figcaption>A working prototype</figcaption>
+      </figure>
+      <br>
+
+      <h3>The solution</h3>
+
+      <p>This could significantly reduce human error during the inventory and registration, reduce the time on task and create a communication channel between customer and platform that extended the possibilities of what could be achieved* at a relatively low cost. </p>
+
+      <p>
+      At its core, HSDS was designed to be flexible in the sense that it doesn’t come with the strict rules and guidelines common with these types of systems. Instead it expects the designer to use best judgement, and acts as a non-restrictive creative starting point.</p>
+
+      <quote>
+      “A Design System is a set of rules, and rules and creativity aren't mutually exclusive. Rules can be broken”
+      — Mina Markham</quote>
+
+      <p>
+      The pre-build components are there for ease — but if a designer wants to freestyle their own design and use only the smallest building blocks, we support that too. Designers exist to serve the problem being solved, not beholden to the systems created to help them.
+      Every library comes with its own “Example Usage” files which outline the more common ways components are grouped
+      Below/ An example of how just one component can have a number of different states and configurations</p>
+
+      <p>
+      Splitting our Design System by business function also meant that we could centrally manage our brand assets such as colors, illustrations, icons and anything that is agnostic to environment or team. Additionally each designer could pick and choose only the libraries that affected their role, meaning easier onboarding and maintenance. This approach meant that by adding, removing or changing an asset (an icon, for example) in the core library, every other UI Library would gracefully consume that change. This was perfect for our 2018 brand refresh, where we changed our entire color pallet — there was no risk to ‘downstream’ libraries and all components were immediately updated.</p>
+
+      <p>
+      A centralized library also means that matter what team or project a designer is part of — they reference the same shadows, color pallets and core shared elements for a consistent brand experience:</p>
+
+      <br>
+      <figure>
+        <img class='article-image' src='/img/uxaward.jpg' width="100%" />
+        <figcaption>UX Design Awards 2018 -  Berlin</figcaption>
+      </figure>
+      <br>
+
+      <h3>Bridging the gap</h3>
+      <p>Below/ The React Storybook that contains all components and visual QA tools:
+
+      Design Systems are only useful when they’re easy for Engineers to consume — otherwise Designers are operating in a vaccuum. From the outset, HSDS involved UI Engineers from across the business to build the necessary tooling that sees each component visualized, tested and self-contained — ready to be used by anyone who implements code. Thanks to a monumental effort from Help Scout’s Design Engineer (our very own Q), HSDS now operates as a single-source of truth and visual quality benchmark for every team.</p><p>
+      Although I initially designed and orchestrated the construction of HSDS, today it’s being used and contributed to by every Designer and UI Engineer across the business — fully documented and managed by a group with no single point of ownership. This way the system can continue to grow and evolve without much overhead. Even the documentation (below) gets automatically updated when new changes and examples are comitted.</p>
+
+    </article>
+
+    <aside layout='⊟'>
+      <div layout='⎅'>
+        <div class='badge' layout='⊡'><b></b></div>
+        <p> <b>Role:</b> Lead Inventor <br>
+          <b>Team:</b> Jason Klein, Ken Chen, Melina Maclarty, Ricky Koo, Shamant Kengeri
+Role:  Project Lead.</p>
+      </div>
+      <br>
+
+      <div layout='⎅'>
+        <div class='badge' style="opacity:0;" ></div>
+        <p><b>Awards</b><br>UX Awards Nominee</b>
+        Berlin 2018 <a href='https://ux-design-awards.com/en/teilnehmer/2018/'>💫</a></p>
+      </div>
+
+      <div class='recommended' layout='⎅' style='display:none'>
+        <div class='badge' style="opacity:0;" ></div>
+        <p><b>Recommended articles</b><br>UX Awards Nominee</b>
+        Berlin 2018 <a href='https://ux-design-awards.com/en/teilnehmer/2018/'>💫</a></p>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="/js/suggested.js"></script>
+
+</body>
+</html>

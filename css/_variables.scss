@@ -2,22 +2,7 @@
 
 $grey1000: rgba(0,0,60,1);
 $grey900: rgba(0,0,60, 0.9);
-$grey700: rgba(0,0,60, 0.7);
 $grey600: rgba(0,0,60, 0.6);
 $grey400: rgba(0,0,60, 0.4);
 $grey200: rgba(0,0,60, 0.04);
 $grey100: rgba(0,0,60, 0.02);
-
-//data-scroll
-
-[data-scroll] {
-  transition: opacity 1s;
-}
-
-[data-scroll="in"] {
-  opacity: 1;
-}
-
-[data-scroll="out"] {
-  opacity: 0;
-}
