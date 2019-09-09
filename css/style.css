@@ -37,7 +37,6 @@ p {
   line-height: 1.75;
   letter-spacing: -0.18;
   color: rgba(0, 0, 60, 0.7);
-  text-align: left;
 }
 
 [layout='◨'] {
@@ -92,13 +91,13 @@ p {
   main {
     flex-direction: column !important;
   }
+  main > * > * {
+    text-align: left !important;
+  }
   aside {
     margin-left: 0 !important;
     padding-left: 0 !important;
     width: 100% !important;
-  }
-  article p {
-    font-size: 2rem;
   }
 }
 

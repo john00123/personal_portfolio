@@ -28,13 +28,14 @@
   main{
     flex-direction: column!important;
   }
+
+  main > * > *{
+    text-align: left!important;
+  }
   aside{
     margin-left: 0!important;
     padding-left: 0!important;
     width: 100%!important;
   }
 
-  article p{
-    font-size: 2rem;
-  }
 }
