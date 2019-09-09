@@ -20,8 +20,9 @@
 
 [grid='yes']{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 3fr));
+  grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
   grid-gap: 20px;
+  width: 100%;
 }
 
 @media (max-width: 980px) {

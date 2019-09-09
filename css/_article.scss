@@ -33,14 +33,33 @@ article p{
 }
 
 #one{
-  background-color:#91D6D3;
+  background-color:white;
 }
 
 #two{
-  background-color: #5BA4E8;
+  background-color: white;
 }
 
 .third{
-  background-color: #FCD669;
+  background-color: $blue100;
   grid-row: 2;
+}
+
+
+#rainbow{
+  background: linear-gradient(to right, #1CD760, blue, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/// font
+.sizing{
+  line-height: 0.5;
+  margin-top:-10%;
+  font-size: 80px;
+}
+
+#font-sizing{
+  position: absolute;
+  bottom: 20px;
 }

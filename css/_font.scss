@@ -8,6 +8,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $grey1000;
+  ::selection {
+    background-color: $blue100;
+    color: $blue500;
+  }
 }
 
 
@@ -22,11 +26,20 @@ h2{
   font-size: 16pt;
 }
 
-p{
+p, ol > li{
   margin-top: 0;
   font-weight: 300;
   font-size: 1em;
   line-height: 1.75;
   letter-spacing: -0.18;
   color:$grey700;
+}
+
+ol > li:not(:last-child){
+  margin-bottom: 10px;
+}
+
+ol{
+  padding-left: 48px;
+  border-left: 3px solid $grey200;
 }
