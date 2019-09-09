@@ -2,7 +2,6 @@
 
 .title{
   margin-bottom: 0;
-  margin-left: -2pt;
 }
 
 .description{ color: $grey400 }
@@ -24,4 +23,24 @@ figcaption{
 
 article p{
   margin-bottom: 30px;
+}
+
+
+.box{
+  @include flex(center,center, column);
+  height: 80px;
+  border-radius: 8px;
+}
+
+#one{
+  background-color:#91D6D3;
+}
+
+#two{
+  background-color: #5BA4E8;
+}
+
+.third{
+  background-color: #FCD669;
+  grid-row: 2;
 }

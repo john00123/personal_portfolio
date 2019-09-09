@@ -22,38 +22,42 @@
       <!-- <br> -->
       <h3> Overview</h3>
       <p>
-      In 2015 I had the opportunity to explore design solutions outside of our product portfolio, Nutanix Smart Bezel was the result of that exercise. At its core this faceplate was designed to allow communication between the server infrastructure and Nutanix management platform (Prism). </p>
+      In 2016 I had the opportunity to explore design solutions outside of our product portfolio. Nutanix Smart Bezel was the result of that exercise. At its core the project created an abstraction that allowed communication between server infrastructure, our installation and management platforms  through a combination of hardware and software.</p>
 
       <h3>The problem</h3>
 
       <p>
-        Nutanix node installation process was fragmented across several interfaces. A datacenter admin needed to manually keep track on the inventory and the state of each piece of hardware through an excell sheet. An inefficient and costly process to company, partners and our customers that was prone to human error as it rely on admins to keep track of all moving parts. Visits to our datacenter and interviews with our own datacenter admin showcased these issues at length.
+        Nutanix hardware installation process was fragmented. Datacenter admins needed to keep track on the inventory and the state of each piece of hardware through an excell sheet, retype network information manually to another platform and use this same information to register the product. An inefficient and costly process to company, partners and our customers that was prone to human error as it relies on administrators to keep track of all moving parts.
       </p>
 
 
       <img alt="Picture of a server room with plugged devices" class='article-image' src='img/admin.jpg' width="100%" data-scroll/>
       <figcaption>Victor our datacenter admin talking to our team</figcaption><br>
 
-      <h3>An unconventional solution</h3>
+      <h3>The challenge</h3>
 
-      <p>Nutanix at the moment provided <u>on-premise</u> solutions. For the vast majority of our clients that meant that no communication outside the datacenter.
-
-      To create a secure channel I needed a way to create a local connection between the hardware and the system, for this reason using a companion app as the communication layer was a core part of this concept. A device connected to the local network can read some basic registration information from the hardware encoded via NFC plate.
+      <p>Nutanix during that period provided only <a href='https://en.wikipedia.org/wiki/On-premises_software' target="_blank">on-premises</a> solutions. For the vast majority of our clients that meant that no communication outside the datacenter for security purposes.
+      <br><br>
+      To create a secure channel I needed a way to establish a local connection between the hardware and the system, for this reason using a companion app as the orchestration layer was a core part of this concept. It was portable, accesible and easy to develop a prototype for a POC. <br>
     <br>
-      After pitching the idea to my colleagues we decided utilize a piece of hardware that traditionally gets removed from the chasis, the bezel of the node and improve upon this.</p>
+      After pitching the idea to my colleagues we decided to utilize a piece of hardware that traditionally gets removed from the chasis, the bezel of the node as the missing piece to link the hardware and our app.</p>
 
       <br>
-      <div class='block' layout='⊡'>
+      <div class='block' layout='⊡' grid='yes'>
+        <div class='box' id='one'>Companion App</div>
+        <div class='box' id='two'>Smart Bezel</div>
+        <div class='box third' id='three'>3</div>
+        <div class='box third' id='four'>4</div>
+        <div class='box third' id='five'>5</div>
 
       </div>
 
-    <h3> It's all about teamwork </h3>
-    <p> During the company's hackathon we had time to decipher the details of how to make this work. I posted our all-design team in the list of project participating. A couple of hours later we had 3 engineers interested in helping develop this concept even further.
+    <h3>Time to refresh </h3>
+    <p> During the company's hackathon we had time to decipher the details of how to make this work. I posted at that moment our 3 designers team in the list of project participating. A couple of hours later we had 3 engineers interested in helping develop this concept further.
 
-    <b>Spoiler alert!</b> At the end of our hackathon we had a working prototype that pairs the device and the plarform directly.</p>
 
     <h3>Opportunity </h3>
-    <p> It was during the concept phase for the commpanion app in which I thought to leverage some of the smartphone functionality to enhance the concept even further by detecting the relative positioning of the phone during a registration event. This will allow the user to create a 3D space of the server room, information that can be use to make hardware troubleshooting more efficient. The techinical details of how we achieve this are listed in our <u>patent application</u>. It was this idea and the work of the team that led the project to win a nomination to the UX awards in Berlin during IFA event floor.</p>
+    <p> It was during the concept phase for the companion app in which I thought to leverage some of the smartphone functionality to enhance the concept even further by detecting the relative positioning of the phone during a registration event. This will allow the user to create a 3D space of the server room, information that can be use to make hardware troubleshooting more efficient. The techinical details of how we achieve this are listed in our <u>patent application</u>. It was this idea and the work of the team that led the project to win a nomination to the UX awards in Berlin during IFA event floor.</p>
 
 
     </article>
@@ -61,9 +65,8 @@
     <aside layout='⊟'>
       <div layout='⎅'>
         <div class='badge' layout='⊡'><b></b></div>
-        <p> <b>Role:</b> Lead Inventor <br>
-          <b>Team:</b> Jason Klein, Ken Chen, Melina Maclarty, Ricky Koo, Shamant Kengeri
-Role:  Project Lead.</p>
+        <p> <b>Role:</b> Team Lead / Inventor <br>
+          <b>Team:</b> Jason Klein, Ken Chen, Melina Maclarty, Ricky Koo, Shamant Kengeri</p>
       </div>
       <br>
 
