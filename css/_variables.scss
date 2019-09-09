@@ -11,18 +11,3 @@ $grey100: rgba(0,0,60, 0.02);
 
 $blue500: rgba(5,135,251, 1);
 $blue100: rgba(5,135,251, 0.1);
-
-
-//data-scroll
-
-[data-scroll] {
-  transition: opacity 1s;
-}
-
-[data-scroll="in"] {
-  opacity: 1;
-}
-
-[data-scroll="out"] {
-  opacity: 0;
-}

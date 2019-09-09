@@ -1,6 +1,6 @@
-$(document).ready(function() {
 
-  ScrollOut();
-
-
+jQuery(document).ready(function($) {
+  ScrollOut({
+    /* options */
+  });
 });

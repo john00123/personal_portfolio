@@ -87,12 +87,17 @@ hr{
 
 .badge{
   background-color: #FB2C52;
-  color:white;
   border-radius: 4pc;
   flex-shrink: 0;
   width: 16pt;
   padding: 5pt;
   margin-right: 16px;
+  h3{
+    color:white;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
 }
 
 
@@ -130,4 +135,24 @@ hr{
   padding: 16pt 16pt;
   width: 60%;
   box-sizing: border-box;
+}
+
+
+//
+
+//data-scroll
+
+[data-scroll] {
+  transition: all 0.4s;
+  will-change: transform;
+}
+
+[data-scroll="in"] {
+  opacity: 1;
+  transform: none!important;
+}
+
+[data-scroll="out"] {
+  opacity: 0;
+  transform: translateY(-20px)!important;
 }
