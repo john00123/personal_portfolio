@@ -11,12 +11,7 @@ $grey100: rgba(0,0,60, 0.02);
 //data-scroll
 
 [data-scroll] {
-  transition: opacity 0.5 linear;
-
-  img{
-    display: block;
-    transform: scale(calc(0.8+0.3* var(--visible-y)));
-  }
+  transition: opacity 1s;
 }
 
 [data-scroll="in"] {
