@@ -37,6 +37,7 @@ p {
   line-height: 1.75;
   letter-spacing: -0.18;
   color: rgba(0, 0, 60, 0.7);
+  text-align: left;
 }
 
 [layout='◨'] {
@@ -96,9 +97,6 @@ p {
     padding-left: 0 !important;
     width: 100% !important;
   }
-}
-
-@media (max-width: 600px) {
   article p {
     font-size: 2rem;
   }
