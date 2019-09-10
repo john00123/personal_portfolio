@@ -12,6 +12,11 @@
   color: #0587fb;
 }
 
+label {
+  font-size: 12pt;
+  color: rgba(0, 0, 60, 0.4);
+}
+
 h1 {
   font-size: 36pt;
   font-weight: 500;
@@ -165,9 +170,13 @@ article p {
   font-size: 80px;
 }
 
-#font-sizing {
+#nutanix-soft-sizing {
   position: absolute;
   bottom: 20px;
+}
+
+#nutanix-soft-sizing label {
+  text-align: center;
 }
 
 body {
