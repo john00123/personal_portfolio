@@ -379,7 +379,7 @@ article p {
 .sizing {
   margin-top: -40px;
   font-size: 80px;
-  font-family: 'Nutanix_Soft';
+  font-family: "Nutanix_Soft", sans-serif !important;
   transition: font-size 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   will-change: font-size;
 }
