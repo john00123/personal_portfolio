@@ -69,11 +69,13 @@ aside{
 figure, .block{
   width: 100%;
   margin: 0;
+  position: relative;
 }
 
 img, video, .block {
   border-radius: 8pt;
   background-color: $grey200;
+  overflow: hidden;
 }
 
 hr{

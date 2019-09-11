@@ -183,11 +183,13 @@ aside p {
 figure, .block {
   width: 100%;
   margin: 0;
+  position: relative;
 }
 
 img, video, .block {
   border-radius: 8pt;
   background-color: rgba(0, 0, 60, 0.04);
+  overflow: hidden;
 }
 
 hr {
@@ -374,6 +376,27 @@ article p {
   background: linear-gradient(to right, #1CD760, blue, violet);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.phone {
+  display: block;
+  position: absolute;
+  background: url("../img/blank.png");
+  height: 800px;
+  width: 800px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 30px;
+  left: 150px;
+}
+
+.phone-content {
+  position: absolute;
+  background-color: red;
+  height: 275px;
+  width: 320px;
+  top: 90px;
+  left: 40px;
 }
 
 .sizing {
