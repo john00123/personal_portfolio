@@ -391,12 +391,29 @@ article p {
 }
 
 .phone-content {
+  padding: 30px;
   position: absolute;
-  background-color: red;
+  border-radius: 5pt 5pt 0 0;
+  background-color: white;
   height: 275px;
-  width: 320px;
+  width: 300px;
+  margin-top: 10px;
   top: 90px;
-  left: 40px;
+  left: 50px;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.phone-content::before {
+  content: 'd';
+  color: transparent;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 -20px;
+  height: 15px;
+  border-radius: 5pt 5pt 0 0;
+  margin-top: -45px;
+  z-index: 1;
 }
 
 .sizing {
