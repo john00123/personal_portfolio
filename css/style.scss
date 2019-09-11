@@ -2,9 +2,6 @@
 @import 'variables';
 @import 'font';
 @import 'layout';
-@import 'article';
-
-
 
 
 body{
@@ -17,7 +14,7 @@ body{
 
 main{
   max-width: 1280px;
-  padding: 20px;
+  padding: 30px;
   &::after{
     content:' ';
     position: fixed;
@@ -75,7 +72,7 @@ figure, .block{
 }
 
 img, video, .block {
-  border-radius: 4pt;
+  border-radius: 8pt;
   background-color: $grey200;
 }
 
@@ -137,3 +134,8 @@ hr{
   width: 60%;
   box-sizing: border-box;
 }
+
+
+//
+@import 'inputs';
+@import 'article';

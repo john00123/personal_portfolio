@@ -8,8 +8,8 @@
 }
 
 * ::selection {
-  background-color: rgba(5, 135, 251, 0.1);
-  color: #0587fb;
+  background-color: rgba(0, 85, 255, 0.1);
+  color: rgba(0, 85, 255, 0.992157);
 }
 
 label {
@@ -109,76 +109,6 @@ ol {
   }
 }
 
-.title {
-  margin-bottom: 0;
-}
-
-.description {
-  color: rgba(0, 0, 60, 0.4);
-}
-
-article > p {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-quote {
-  color: rgba(0, 0, 60, 0.6);
-  padding: 20px 0;
-}
-
-figcaption {
-  color: rgba(0, 0, 60, 0.4);
-  margin: 8pt 0 0 0;
-}
-
-article p {
-  margin-bottom: 30px;
-}
-
-.box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 80px;
-  border-radius: 8px;
-}
-
-#one {
-  background-color: white;
-}
-
-#two {
-  background-color: white;
-}
-
-.third {
-  background-color: rgba(5, 135, 251, 0.1);
-  grid-row: 2;
-}
-
-#rainbow {
-  background: linear-gradient(to right, #1CD760, blue, violet);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.sizing {
-  line-height: 0.5;
-  margin-top: -10%;
-  font-size: 80px;
-}
-
-#nutanix-soft-sizing {
-  position: absolute;
-  bottom: 20px;
-}
-
-#nutanix-soft-sizing label {
-  text-align: center;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -192,7 +122,7 @@ body {
 
 main {
   max-width: 1280px;
-  padding: 20px;
+  padding: 30px;
 }
 
 main::after {
@@ -214,7 +144,7 @@ article {
 }
 
 a {
-  color: #0587fb;
+  color: rgba(0, 85, 255, 0.992157);
   text-decoration: none;
   position: relative;
 }
@@ -225,7 +155,7 @@ a:after {
   bottom: -1px;
   width: 100%;
   height: 1px;
-  background-color: #0587fb;
+  background-color: rgba(0, 85, 255, 0.992157);
   left: 0;
   transition: transform .15s linear;
   transform-origin: left;
@@ -256,7 +186,7 @@ figure, .block {
 }
 
 img, video, .block {
-  border-radius: 4pt;
+  border-radius: 8pt;
   background-color: rgba(0, 0, 60, 0.04);
 }
 
@@ -321,4 +251,159 @@ hr {
   padding: 16pt 16pt;
   width: 60%;
   box-sizing: border-box;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 8pt;
+  width: 8pt;
+  border-radius: 4pc;
+  background: rgba(0, 0, 60, 0.4);
+  margin-top: -4px;
+  cursor: pointer;
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  height: 8pt;
+  width: 12pt;
+  border-radius: 4pc;
+  background: rgba(0, 85, 255, 0.992157);
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  height: 8pt;
+  width: 12pt;
+  border-radius: 4pc;
+  background: rgba(0, 85, 255, 0.992157);
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: rgba(0, 0, 60, 0.04);
+  border-radius: 1.3px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: rgba(0, 0, 60, 0.04);
+}
+
+.title {
+  margin-bottom: 0;
+}
+
+.description {
+  color: rgba(0, 0, 60, 0.4);
+}
+
+article > p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+quote {
+  color: rgba(0, 0, 60, 0.6);
+  padding: 20px 0;
+}
+
+figcaption {
+  color: rgba(0, 0, 60, 0.4);
+  margin: 8pt 0 0 0;
+}
+
+article p {
+  margin-bottom: 30px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80px;
+  border-radius: 8px;
+}
+
+#one {
+  background-color: white;
+}
+
+#two {
+  background-color: white;
+}
+
+.third {
+  background-color: rgba(0, 85, 255, 0.1);
+  grid-row: 2;
+}
+
+#rainbow {
+  background: linear-gradient(to right, #1CD760, blue, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sizing {
+  margin-top: -40px;
+  font-size: 80px;
+  font-family: 'Nutanix_Soft';
+  transition: font-size 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: font-size;
+}
+
+#nutanix-soft-sizing {
+  margin: 0;
+  padding: 0 20px;
+  position: absolute;
+  bottom: 20px;
+}
+
+#font-sizing {
+  margin: 0 20px;
+}
+
+.highlight {
+  background-color: rgba(0, 85, 255, 0.1);
+}
+
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 100%;
+  background-color: rgba(0, 0, 60, 0.04);
+  height: 1px;
 }

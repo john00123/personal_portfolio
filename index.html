@@ -11,75 +11,120 @@
   <main layout='⎅'>
     <article layout='◰'>
       <h1 class='title'>Smart Bezel</h1>
-      <p class='description'>Improving server configuration and device/system comunication at Nutanix.<br>Intelligent block faceplate and server rack mapping<br> U.S. Application No. 16/211,054
+      <p class='description'>Intelligent block faceplate and server rack mapping<br> U.S. Application No. 16/211,054
       </p>
-<!--
-      <div class='notification'>
-        ☞ &nbsp; This project is in patent pending status, some details are still be under standard NDA
-      </div> -->
-
-      <!-- <img alt="Picture of a server room with plugged devices" class='article-image' src='/img/bezel.png' width="100%"  />
-      <figcaption>Bezel Render - Industrial Design by Ken Chen</figcaption> -->
-
-      <!-- <br> -->
-      <h3> Overview</h3>
-      <p>
-      In 2016 I had the opportunity to explore design solutions outside of our product portfolio. Nutanix Smart Bezel was the result of that exercise. At its core the project created an abstraction that allowed communication between server infrastructure, our installation and management platforms  through a combination of hardware and software.</p>
-
-      <h3>The problem</h3>
 
       <p>
-        Nutanix hardware installation process was fragmented. Datacenter admins needed to keep track on the inventory and the state of each piece of hardware through an excell sheet, retype network information manually to another platform and use this same information to register the product. An inefficient and costly process to company, partners and our customers that was prone to human error as it relies on administrators to keep track of all moving parts.
+      This project was an opportunity to explore design solutions outside our product portfolio. At its core, the concept improved and simplified the datacenter admin experience by creating an orchestration layer between the infrastructure and its management platform through a combination of hardware and software.</p>
+
+      <h3>Some context</h3>
+
+      <p>
+        Back in 2016 <a href='https://www.webscaleworks.com/Hardware-Platforms.asp' target="_blank">Nutanix hardware</a> installation process was fragmented. Datacenter admins needed to keep track of hardware inventory (usually through an excell sheet), manually enter network information to install our OS in a different interface and register the product in a third. An inefficient and costly process to company, partners and customers that was prone to data-entry error, as it relied on administrators to keep track of all moving parts.
+        <br><br>
+        During that period the company provided <a href='https://en.wikipedia.org/wiki/On-premises_software' target="_blank">on-premises</a> solutions. That meant for the vast majority of our clients the information privacy required no communication outside of the datacenter.
       </p>
+
 
 
       <img alt="Picture of a server room with plugged devices" class='article-image' src='img/admin.jpg' width="100%"  />
       <figcaption>Victor our datacenter admin talking to our team</figcaption><br>
 
-      <h3>The challenge</h3>
+      <h3>An unconventional solution</h3>
+      <p> The solution was defined by the following design goals:
+        <ol type="A">
+          <li>Improving the datacenter admin efficiency by reducing manual data-entry.</li>
+          <li>Simplifying the installation process by reducing the amount of services they need to interact.</li>
+          <li>Enriching the hardware troubleshooting experience by providing more precise information of the datacenter.</li>
+        </ol>
+      </p>
 
-      <p>Nutanix during that period provided only <a href='https://en.wikipedia.org/wiki/On-premises_software' target="_blank">on-premises</a> solutions. For the vast majority of our clients that meant that no communication outside the datacenter for security purposes.
-      <br><br>
-      To create a secure channel I needed a way to establish a local connection between the hardware and the system, for this reason using a companion app as the orchestration layer was a core part of this concept. It was portable, accesible and easy to develop a prototype for a POC.</p>
-
+      <p>
+      To be able to achieve this, a local and secure channel of communication to the system needed to be established between the hardware and management platform (Prism). The final concept included a two things: A <span class='highlight'> mobile app (A) </span>, that was to become both the inventory and the orchestration layer, allowing the datacenter admin to configure and share infrastructure information, and a <span class='highlight'>smart bezel (B)</span> with a NFC tag inside containing basic device information needed for pairing.</p>
 
       <div class='block'  layout='⊡'  >
-        <div class='inner-block' grid='yes'>
-          <div class='box' id='one'>Companion App</div>
-          <div class='box' id='two'>Smart Bezel</div>
-          <div class='box third' id='three'>3</div>
-          <div class='box third' id='four'>4</div>
-          <div class='box third' id='five'>5</div>
-        </div>
+
       </div>
       <figcaption>Communication diagram</figcaption><br>
-    <br>
-      <p>After pitching the idea to my colleagues we decided to utilize a piece of hardware that traditionally gets removed from the chasis, the bezel of the block as the missing piece to link the hardware and our app.</p>
-    <h3>Time to refresh </h3>
-    <p> During the company's hackathon we had time to decipher the details of how to make this work. I posted at that moment our 3 designers team in the list of project participating. A couple of hours later we had 3 engineers interested in helping develop this concept further.
-    We started by designing the newly conceptualized bezel. We had in our ranks a designer with some previous industrial design experience, he helped shaping the final concept of the bezel we end up using. <br><br> The final concept integrated a <span id='rainbow'>255 color LED</span> strip we could use to transmit status information from the hardware back to our admins, and a NFC sticker placed behind the inner side of the bezel, this will allow the application to read the harwared information encoded.
+
+      <p> I pitched this idea to a couple of colleagues, that later expanded to a team of 6 including 3 back-end engineers and 3 designers. We used the company's hackthon to develop this concept to a working proof of concept</p>
+
+    <h3>A. Companion app </h3>
+    <p>
+      The mobile app desing improved efficency of creating and mantaining a hardware inventory database, at the same time it was in charge of pairing with the imagining and management services. <br> For our proof of concept we defaulted using Android as our team felt the most comfortable with, and used our management platform (Prism) as a target. The main taskflows included:
+
+      <ol type="A">
+        <li>Adding blocks through scanning of the bezel to create an inventory. </li>
+        <li>Once added, the app can be registered to the target platform.</li>
+        <li>By selecting the blocks, the app will communicate the hardware details to Prism, effectively registering the block.</li>
+      </ol>
+    </p>
+
+    <div class='block'  layout='⊡'  >
+
+    </div>
+    <figcaption>Mobile App registration</figcaption><br>
+
+
+    <p>
+    The application goal was to be minimal, unobtrusive. The user experience and visual language were focused on making the app simple to use and fast to use. Adding hardware to the inventory was a common task for a datacenter admin so we wanted to make it a frictionless experience.
+    </p>
+
+    <h3>B. Smart bezel </h3>
+    <p>
+    We had in our ranks a designer with some previous industrial design experience, he helped shaping the final concept of the bezel we end up using. <br><br> The final concept integrated a <span id='rainbow'>255 color LED</span> strip we could use to transmit status information from the hardware back to our admin and our NFC sticker placed behind the inner side of the bezel with the necesary hardware information to create a link to the app.
     </p>
 
     <img alt="Picture of a sheet of paper with several drawings of server faceplates" class='article-image' src='img/concept2.png' width="100%"  />
     <figcaption>Design concepts for the bezel</figcaption><br>
 
-    <h3>The companion app </h3>
-    <p >
-      Our next goal was to create the app that would be used as a conduit between our hardware inventory, imaging and management platforms. <br> For our proof of concept we defaulted using Android as our team felt the most comfortable with, and used our management platform (Prism) as a target. For our concept:
+    <h3> A richer troubleshooting experience </h3>
+    <p>
+      We expanded the original concept for both the bezel and the mobile app to allow datacenter information to be captured locally by using the smartphone functionality by determining the position of the phone during a registration event. This would allow the user to create a 3D space of the server room. The techinical details of how we achieve this are listed in our <u>patent application.</u> </p>
 
+      <div class='block'  layout='⊡'  >
+
+      </div>
+      <figcaption>3D rack registration</figcaption><br>
+
+
+      <p>
+      In addition, the smart bezel onced paired with the management service would be able to show system information trhough the stip. We captured a couple of use cases for the demo that included:</p>
       <ol type="A">
-        <li>The application would manage inventory by adding blocks through scanning of the bezel. </li>
-        <li>Once added, the app can be registered to the target platform.</li>
-        <li>By selecting the blocks, the app will communicate the hardware details to Prism, effectively registering the block.</li>
-        </ol>
-    </p>
+        <li>Block hardware error. </li>
+        <li>Software operations, like updating that are taking place in a specific piece of hardware.</li>
+      </ol><br>
 
-    <!-- <img alt="Physical prototype of the final concept for the bezel" class='article-image' src='img/bezel.png' width="100%"  />
-    <figcaption>Prototype showing update in progress</figcaption><br> -->
+      <div class='block'  layout='⊡'  >
 
-    <h3>Server room 3D mapping </h3>
-    <p> It was during the concept phase for the companion app in which I discussed the possibility of leveraging some of the smartphone functionality to determing positioning of the phone during a registration event. This would allow the user to create a 3D space of the server room. This would make hardware troubleshooting more efficient and provide our users with a more reach experience of their data-center. The techinical details of how we achieve this are listed in our <u>patent application.</u></p>
+      </div>
+      <figcaption>Final demoreel</figcaption><br>
 
+
+    <h3>UX Design awards nomination</h3>
+    <p> In 2018 two years after this concept was showcased in the company, we earned a nomination as part of the IFA Consumer Electronic's UX Design awards in Berlin, an international competition for user-centric design solutions that utilize state-of-the-art technologies.</p>
+
+
+    <img alt="Picture of a server room with plugged devices" class='article-image' src='img/uxaward.jpg' width="100%"  />
+    <figcaption>UX Design Awards - IFA Cosumer Electronic Berlin 2018</figcaption><br>
+
+    <hr>
+    <h3> Did you like this case study? </h3>
+    <p>
+      There is always room for improvement so please take some time to give some feedback.</p>
+
+    <div layout='⎅'><button>👍</button> <button>👎</button></div>
+
+    <hr>
+
+    <h3> Recommended case studies</h3>
+      <div layout='⎅' style='width:100%'>
+
+        <div class='block'  layout='⊡'>Article 1</div>
+        <div class='block'  layout='⊡'>Article 2</div>
+        <div class='block'  layout='⊡'>Article 3</div>
+
+      </div>
 
     </article>
 
