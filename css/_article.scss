@@ -55,42 +55,40 @@ article p{
 
 .phone{
   display: block;
-  position: absolute;
   background: url('../img/blank.png');
-  height: 800px;
-  width: 800px;
-  background-size: contain;
+  background-size: 350px;
+  background-position: 50% 0%;
   background-repeat: no-repeat;
-  top:30px;
-  left: 23%;
-  &-content{
-    padding: 30px;
-    position: absolute;
-    border-radius:5pt 5pt 0 0;
-    background-color: white;
-    height: 275px;
-    width: 300px;
-    margin-top: 10px;
-    top:90px;
-    left:50px;
-    z-index: 10;
-    box-sizing: border-box;
-    &::before{
-      content: 'd';
-      color:transparent;
-      display: block;
-      background-color: rgba(255,255,255,0.4);
-      margin: 0 -20px;
-      height: 15px;
-      border-radius:5pt 5pt 0 0;
-      margin-top: -45px;
-      z-index: 1;
-    }
-  }
+  height: 100%;
+  width: 100%;
+  margin-bottom: -40px;
 }
 
 
-
+dialog{
+  position: absolute;
+  bottom: 0;
+  padding: 30px;
+  border-radius:5pt 5pt 0 0;
+  background-color: white;
+  height: 275px;
+  width: 300px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  align-self: center;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  &::before{
+    content: 'd';
+    color:transparent;
+    display: block;
+    background-color: rgba(255,255,255,0.4);
+    margin: 0 -20px;
+    height: 15px;
+    border-radius:5pt 5pt 0 0;
+    margin-top: -45px;
+    z-index: 1;
+  }
+}
 
 /// font
 
