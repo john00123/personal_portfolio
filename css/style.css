@@ -1,15 +1,15 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap");
 * {
-  font-family: 'Noto Sans';
+  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #00003c;
 }
 
 * ::selection {
-  background-color: rgba(5, 135, 251, 0.1);
-  color: #0587fb;
+  background-color: rgba(0, 85, 255, 0.1);
+  color: rgba(0, 85, 255, 0.992157);
 }
 
 label {
@@ -28,22 +28,59 @@ h2 {
   font-size: 16pt;
 }
 
-p, ol > li {
+p, ol > li, ul > li {
   margin-top: 0;
   font-weight: 300;
   font-size: 1em;
   line-height: 1.75;
-  letter-spacing: -0.18;
+  letter-spacing: -0.12;
   color: rgba(0, 0, 60, 0.7);
 }
 
-ol > li:not(:last-child) {
+ol > li:not(:last-child), ul > li:not(:last-child) {
   margin-bottom: 10px;
 }
 
-ol {
+ol, ul {
   padding-left: 48px;
   border-left: 3px solid rgba(0, 0, 60, 0.04);
+}
+
+.thin, .regular, .normal, .semibold, .bold {
+  font-size: 17pt;
+  font-family: 'Nutanix_Soft', sans-serif;
+  line-height: 2;
+  padding: 0 8pt;
+  margin-left: 16pt;
+}
+
+.thin {
+  font-weight: 200;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.normal {
+  font-weight: 500;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+*, * > * {
+  box-sizing: border-box;
 }
 
 [layout='◨'] {
@@ -71,6 +108,13 @@ ol {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  flex-direction: column;
+}
+
+[layout='◩'] {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
 }
 
@@ -107,6 +151,175 @@ ol {
     padding-left: 0 !important;
     width: 100% !important;
   }
+  .thin, .regular, .normal, .semibold, .bold {
+    font-size: 13pt;
+  }
+  #pixel-fitting {
+    width: 120%;
+  }
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main {
+  max-width: 1280px;
+  padding: 20px 50px;
+}
+
+article {
+  max-width: 80ch;
+  flex-shrink: none;
+}
+
+aside {
+  display: flex;
+  position: sticky;
+  top: 80px;
+  margin-left: 60px;
+  padding-left: 20px;
+  max-width: 40ch;
+}
+
+aside p {
+  margin-top: 0;
+}
+
+figure, .block {
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+
+img, video, .block {
+  border-radius: 8pt;
+  background-color: rgba(0, 0, 60, 0.04);
+  overflow: hidden;
+}
+
+hr {
+  background-color: rgba(0, 0, 60, 0.02);
+  height: 1px;
+  border: none;
+}
+
+.badge {
+  background-color: rgba(0, 85, 255, 0.992157);
+  border-radius: 4pc;
+  flex-shrink: 0;
+  width: 16pt;
+  padding: 5pt;
+  margin-right: 16px;
+}
+
+.badge h3 {
+  color: white;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.sq {
+  height: 40pt;
+  width: 40pt;
+  background-color: lavender;
+  margin-right: 16pt;
+}
+
+.text {
+  flex-grow: 1;
+}
+
+.text h3, .text p {
+  margin: 0;
+}
+
+.block {
+  height: 400px;
+  padding: 20px;
+  position: relative;
+}
+
+.small-card {
+  background-color: white;
+  border-radius: 4pt;
+  padding: 16pt 16pt;
+  width: 60%;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */
+  position: relative;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 14pt;
+  width: 33%;
+  border-radius: 4pc;
+  background: rgba(0, 85, 255, 0.992157);
+  margin-top: -8px;
+  cursor: grab;
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  height: 8pt;
+  width: 33%;
+  border-radius: 4pc;
+  background: rgba(0, 85, 255, 0.992157);
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  height: 8pt;
+  width: 33%;
+  border-radius: 4pc;
+  background: rgba(0, 85, 255, 0.992157);
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: rgba(0, 0, 60, 0.04);
+  border-radius: 1.3px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: rgba(0, 0, 60, 0.04);
 }
 
 .title {
@@ -118,8 +331,7 @@ ol {
 }
 
 article > p {
-  text-align: justify;
-  text-justify: inter-word;
+  text-justify: inter-character;
 }
 
 quote {
@@ -154,7 +366,7 @@ article p {
 }
 
 .third {
-  background-color: rgba(5, 135, 251, 0.1);
+  background-color: rgba(0, 85, 255, 0.1);
   grid-row: 2;
 }
 
@@ -164,57 +376,77 @@ article p {
   -webkit-text-fill-color: transparent;
 }
 
+.phone {
+  display: block;
+  background: url("../img/blank.png");
+  background-size: 350px;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  margin-bottom: -40px;
+}
+
+dialog {
+  position: absolute;
+  bottom: 0;
+  padding: 30px;
+  border-radius: 5pt 5pt 0 0;
+  background-color: white;
+  height: 275px;
+  width: 300px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  align-self: center;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+dialog::before {
+  content: 'd';
+  color: transparent;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 -20px;
+  height: 15px;
+  border-radius: 5pt 5pt 0 0;
+  margin-top: -45px;
+  z-index: 1;
+}
+
 .sizing {
-  line-height: 0.5;
-  margin-top: -10%;
+  margin-top: -40px;
   font-size: 80px;
+  font-family: "Nutanix_Soft", sans-serif !important;
+  transition: font-size 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: font-size;
 }
 
 #nutanix-soft-sizing {
+  margin: 0;
+  padding: 0 20px;
   position: absolute;
   bottom: 20px;
 }
 
-#nutanix-soft-sizing label {
-  text-align: center;
+#font-sizing {
+  margin: 0 20px;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  min-width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.highlight {
+  background-color: rgba(0, 85, 255, 0.1);
 }
 
-main {
-  max-width: 1280px;
-  padding: 20px;
-}
-
-main::after {
-  content: ' ';
-  position: fixed;
+hr {
+  border: 0;
+  clear: both;
   display: block;
-  background-color: rgba(0, 0, 60, 0.02);
-  height: 400px;
-  width: 100vw;
-  top: 200;
-  left: 0;
-  z-index: -1;
-  transform: skewX(45deg) rotate(20deg);
-}
-
-article {
-  max-width: 80ch;
-  flex-shrink: none;
+  width: 100%;
+  background-color: rgba(0, 0, 60, 0.04);
+  height: 1px;
 }
 
 a {
-  color: #0587fb;
+  color: rgba(0, 85, 255, 0.992157);
   text-decoration: none;
   position: relative;
 }
@@ -225,7 +457,7 @@ a:after {
   bottom: -1px;
   width: 100%;
   height: 1px;
-  background-color: #0587fb;
+  background-color: rgba(0, 85, 255, 0.992157);
   left: 0;
   transition: transform .15s linear;
   transform-origin: left;
@@ -235,90 +467,4 @@ a:after {
 
 a:hover::after {
   transform: scaleX(1);
-}
-
-aside {
-  display: flex;
-  position: sticky;
-  top: 80px;
-  margin-left: 60px;
-  padding-left: 20px;
-  max-width: 40ch;
-}
-
-aside p {
-  margin-top: 0;
-}
-
-figure, .block {
-  width: 100%;
-  margin: 0;
-}
-
-img, video, .block {
-  border-radius: 4pt;
-  background-color: rgba(0, 0, 60, 0.04);
-}
-
-hr {
-  background-color: rgba(0, 0, 60, 0.02);
-  height: 1px;
-  border: none;
-}
-
-.badge {
-  background-color: #FB2C52;
-  border-radius: 4pc;
-  flex-shrink: 0;
-  width: 16pt;
-  padding: 5pt;
-  margin-right: 16px;
-}
-
-.badge h3 {
-  color: white;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-}
-
-.notification {
-  background-color: rgba(0, 0, 60, 0.04);
-  padding: 12pt 16pt;
-  border-radius: 4pt;
-  font-size: 12px;
-  color: rgba(0, 0, 60, 0.9);
-  margin-bottom: 20px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.sq {
-  height: 40pt;
-  width: 40pt;
-  background-color: lavender;
-  margin-right: 16pt;
-}
-
-.text {
-  flex-grow: 1;
-}
-
-.text h3, .text p {
-  margin: 0;
-}
-
-.block {
-  height: 400px;
-  padding: 20px;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.small-card {
-  background-color: white;
-  border-radius: 4pt;
-  padding: 16pt 16pt;
-  width: 60%;
-  box-sizing: border-box;
 }

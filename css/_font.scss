@@ -4,7 +4,7 @@
 
 
 *{
-  font-family: 'Noto Sans';
+  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $grey1000;
@@ -30,20 +30,38 @@ h2{
   font-size: 16pt;
 }
 
-p, ol > li{
+p, ol > li, ul > li{
   margin-top: 0;
   font-weight: 300;
   font-size: 1em;
   line-height: 1.75;
-  letter-spacing: -0.18;
+  letter-spacing: -0.12;
   color:$grey700;
 }
 
-ol > li:not(:last-child){
+ol > li:not(:last-child), ul > li:not(:last-child){
   margin-bottom: 10px;
 }
 
-ol{
+ol, ul{
   padding-left: 48px;
   border-left: 3px solid $grey200;
 }
+
+
+//font article
+.thin, .regular,.normal, .semibold,.bold{
+  font-size: 17pt;
+  font-family: 'Nutanix_Soft', sans-serif;
+  line-height: 2;
+  padding: 0 8pt;
+  margin-left: 16pt;
+}
+
+.thin{
+  font-weight: 200;
+}
+.regular{ font-weight: 400;}
+.normal{ font-weight: 500;}
+.semibold{ font-weight: 600;}
+.bold{ font-weight: 800;}

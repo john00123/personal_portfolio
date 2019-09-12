@@ -7,6 +7,14 @@
   flex-direction: $orientation;
 }
 
+//reset
+html, body{
+  margin: 0;
+  padding: 0;
+}
+*, * > *{box-sizing:border-box;}
+
+
 //horizontal
 [layout='◨']{ @include flex(center, flex-start, row)}
 [layout='◫']{ @include flex(center, space-between, row)}
@@ -14,6 +22,7 @@
 
 //vertical
 [layout='◰']{ @include flex(flex-start, space-between, column)}
+[layout='◩']{ @include flex(flex-start, flex-start, column)}
 [layout='⊟']{ @include flex(flex-start, center, column)}
 [layout='⊡']{ @include flex(center, center, column)}
 
@@ -37,6 +46,14 @@
     margin-left: 0!important;
     padding-left: 0!important;
     width: 100%!important;
+  }
+
+  .thin, .regular,.normal, .semibold,.bold{
+    font-size: 13pt;
+  }
+
+  #pixel-fitting{
+    width: 120%;
   }
 
 }

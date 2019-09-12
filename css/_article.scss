@@ -7,8 +7,8 @@
 .description{ color: $grey400 }
 
 article > p{
-  text-align: justify;
-  text-justify: inter-word;
+
+  text-justify: inter-character;
 }
 
 quote{
@@ -52,15 +52,78 @@ article p{
   -webkit-text-fill-color: transparent;
 }
 
-/// font
-.sizing{
-  line-height: 0.5;
-  margin-top:-10%;
-  font-size: 80px;
+
+.phone{
+  display: block;
+  background: url('../img/blank.png');
+  background-size: 350px;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  margin-bottom: -40px;
 }
 
+
+dialog{
+  position: absolute;
+  bottom: 0;
+  padding: 30px;
+  border-radius:5pt 5pt 0 0;
+  background-color: white;
+  height: 275px;
+  width: 300px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  align-self: center;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  &::before{
+    content: 'd';
+    color:transparent;
+    display: block;
+    background-color: rgba(255,255,255,0.4);
+    margin: 0 -20px;
+    height: 15px;
+    border-radius:5pt 5pt 0 0;
+    margin-top: -45px;
+    z-index: 1;
+  }
+}
+
+/// font
+
+
+
+.sizing{
+  margin-top:-40px;
+  font-size: 80px;
+  font-family: 'Nutanix_Soft', sans-serif!important;
+  transition: font-size 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: font-size;
+}
+
+
 #nutanix-soft-sizing{
-  label{text-align: center;}
+  margin: 0;
+  padding: 0 20px;
   position: absolute;
   bottom: 20px;
+}
+
+#font-sizing{
+    margin: 0 20px;
+
+}
+
+.highlight{
+  background-color: $blue100;
+}
+
+hr{
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;
+  background-color:$grey200;
+  height: 1px;
 }

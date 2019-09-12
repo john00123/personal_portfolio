@@ -2,14 +2,9 @@
 @import 'variables';
 @import 'font';
 @import 'layout';
-@import 'article';
-
-
 
 
 body{
-  margin: 0;
-  padding: 0;
   min-width: 100vw;
   min-height: 100vh;
   @include flex(center, center, column)
@@ -17,25 +12,87 @@ body{
 
 main{
   max-width: 1280px;
-  padding: 20px;
-  &::after{
-    content:' ';
-    position: fixed;
-    display: block;
-    background-color: $grey100;
-    height: 400px;
-    width: 100vw;
-    top:200;
-    left: 0;
-    z-index: -1;
-    transform: skewX(45deg) rotate(20deg);
-  }
+  padding: 20px 50px;
 }
 
 article{
   max-width: 80ch;
   flex-shrink: none;
 }
+
+
+
+aside{
+  display: flex;
+  position: sticky;
+  top:80px;
+  margin-left: 60px;
+  padding-left: 20px;
+  max-width: 40ch;
+  p{ margin-top: 0;}
+}
+
+figure, .block{
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+
+img, video, .block {
+  border-radius: 8pt;
+  background-color: $grey200;
+  overflow: hidden;
+}
+
+hr{
+  background-color: $grey100;
+  height: 1px;
+  border: none;
+}
+
+.badge{
+  background-color: $blue500;
+  border-radius: 4pc;
+  flex-shrink: 0;
+  width: 16pt;
+  padding: 5pt;
+  margin-right: 16px;
+  h3{
+    color:white;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+}
+
+
+.sq{
+  height: 40pt;
+  width: 40pt;
+  background-color: lavender;
+  margin-right: 16pt;
+}
+
+.text{
+  flex-grow: 1;
+  h3, p{margin: 0;}
+}
+.block{
+  height: 400px;
+  padding: 20px;
+  position: relative;
+}
+.small-card{
+  background-color: white;
+  border-radius: 4pt;
+  padding: 16pt 16pt;
+  width: 60%;
+}
+
+
+//
+@import 'inputs';
+@import 'article';
 
 a{
   color:$blue500;
@@ -57,83 +114,4 @@ a{
   &:hover::after{
     transform: scaleX(1);
   }
-}
-
-aside{
-  display: flex;
-  position: sticky;
-  top:80px;
-  margin-left: 60px;
-  padding-left: 20px;
-  max-width: 40ch;
-  p{ margin-top: 0;}
-}
-
-figure, .block{
-  width: 100%;
-  margin: 0;
-}
-
-img, video, .block {
-  border-radius: 4pt;
-  background-color: $grey200;
-}
-
-hr{
-  background-color: $grey100;
-  height: 1px;
-  border: none;
-}
-
-.badge{
-  background-color: #FB2C52;
-  border-radius: 4pc;
-  flex-shrink: 0;
-  width: 16pt;
-  padding: 5pt;
-  margin-right: 16px;
-  h3{
-    color:white;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-  }
-}
-
-
-.notification{
-  background-color: $grey200;
-  padding: 12pt 16pt;
-  border-radius: 4pt;
-  font-size: 12px;
-  color: $grey900;
-  margin-bottom: 20px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-
-.sq{
-  height: 40pt;
-  width: 40pt;
-  background-color: lavender;
-  margin-right: 16pt;
-}
-
-.text{
-  flex-grow: 1;
-  h3, p{margin: 0;}
-}
-.block{
-  height: 400px;
-  padding: 20px;
-  position: relative;
-  box-sizing: border-box;
-}
-.small-card{
-  background-color: white;
-  border-radius: 4pt;
-  padding: 16pt 16pt;
-  width: 60%;
-  box-sizing: border-box;
 }
