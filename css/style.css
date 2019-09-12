@@ -154,9 +154,6 @@ html, body {
   .thin, .regular, .normal, .semibold, .bold {
     font-size: 13pt;
   }
-  #pixel-fitting {
-    width: 120%;
-  }
 }
 
 body {
