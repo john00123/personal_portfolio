@@ -5,8 +5,6 @@
 
 
 body{
-  margin: 0;
-  padding: 0;
   min-width: 100vw;
   min-height: 100vh;
   @include flex(center, center, column)
@@ -68,19 +66,6 @@ hr{
 }
 
 
-.notification{
-  background-color: $grey200;
-  padding: 16pt 16pt;
-  border-radius: 4pt;
-  font-size: 12px;
-  line-height:8pt;
-  color: $grey900;
-  margin-bottom: 20px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-
 .sq{
   height: 40pt;
   width: 40pt;
@@ -96,14 +81,12 @@ hr{
   height: 400px;
   padding: 20px;
   position: relative;
-  box-sizing: border-box;
 }
 .small-card{
   background-color: white;
   border-radius: 4pt;
   padding: 16pt 16pt;
   width: 60%;
-  box-sizing: border-box;
 }
 
 
