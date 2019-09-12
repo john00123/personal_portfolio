@@ -14,108 +14,114 @@
       <p class='description'>Intelligent block faceplate and server rack mapping<br> U.S. Application No. 16/211,054
       </p>
 
+<!-- Intro -->
       <p>
-      This project was an opportunity to explore design solutions outside our product portfolio. At its core, the concept improved and simplified the datacenter admin experience by creating an orchestration layer between the infrastructure and its management platform through a combination of hardware and software.</p>
+      In this project, I had the opportunity to explore design solutions outside our product portfolio. <br>During that time, I saw an area were design could greatly simplify the experience. I wanted to improve the hardware installation process.</p>
 
+
+<!-- Context -->
       <h3>Some context</h3>
 
       <p>
-        Back in 2016, <a href='https://www.webscaleworks.com/Hardware-Platforms.asp' target="_blank">Nutanix hardware</a> installation process was fragmented. Datacenter admins needed to keep track of hardware inventory (usually through an excell sheet), manually enter network information to install our OS in a different interface and register the product in a third. An inefficient and costly process to company, partners and customers that was prone to data-entry error, as it relied on administrators to keep track of all moving parts.
+        Back in 2016, <a href='https://www.webscaleworks.com/Hardware-Platforms.asp' target="_blank">Nutanix hardware</a> installation process was fragmented across multiple platforms that didn't communicate with each other. This forced datacenter admins to retype information and keep track of every change throughout the installation process. It was for lack of a better term an inefficient and error-prone process to the company, partners, and customers who had to go through installing our hardware.
         <br><br>
-        During that period the company provided <a href='https://en.wikipedia.org/wiki/On-premises_software' target="_blank">on-premises</a> solutions. That meant for the vast majority of our clients the information privacy required no communication outside of the datacenter.
+        Nutanix, at the moment, provided <a href='https://en.wikipedia.org/wiki/On-premises_software' target="_blank">on-premises</a> solutions. Which meant that data privacy was of the utmost importance; this was something I needed to consider if I was to try to solve for the datacenter admin issues.
       </p>
 
 
 
       <img alt="Picture of a server room with plugged devices" class='article-image' src='img/admin.jpg' width="100%"  />
-      <figcaption>Victor our datacenter admin talking to our team</figcaption><br>
+      <figcaption>Victor, our datacenter admin, talking to the team</figcaption><br>
 
-      <h3>An unconventional solution</h3>
-      <p> The solution was defined by the following design goals:
+<!-- Goals -->
+
+
+      <h3>Goals and team</h3>
+      <p> The first step of this process was to have clarity of the problem that I was trying to solve. I captured the installation pain-points and translate them to goals for the project:
         <ol type="A">
-          <li>Improving the datacenter admin efficiency by reducing manual data-entry.</li>
-          <li>Simplifying the installation process by reducing the amount of services they need to interact.</li>
-          <li>Enriching the hardware troubleshooting experience by providing more precise information of the datacenter.</li>
+          <li>Reduce tedious manual data-entry workflows.</li>
+          <li>Reduce the number of services they needed to interact with</li>
+          <li>Provide more precise information from the hardware for troubleshooting.</li>
         </ol>
       </p>
-
       <p>
-      To be able to achieve this, a local and secure channel of communication to the system needed to be established between the hardware and management platform (Prism). The final concept included a two things: A <span class='highlight'> mobile app (A) </span>, that was to become both the inventory and the orchestration layer, allowing the datacenter admin to configure and share infrastructure information, and a <span class='highlight'>smart bezel (B)</span> with a NFC tag inside containing basic device information needed for pairing.</p>
+        Since the company hackathon was around the corner, I wanted to use this opportunity to build something creative, elegant, but at the same time with useful applications for the datacenter operations.</p> <p>I pitched the general idea to a couple of co-workers that wanted to participate in the project. Later that week three back-end engineers reached out completing a group of 6. The team was essential to the success of the project, each one with a complementary skill set that took this project from an idea into a working prototype. </p>
 
-      <div class='block'  layout='⊡'  >
+        <p>
+        I wanted to revise our bezel as part of this project, at the moment, its design was outdated and in need of a refresh. This became the place in which we could add some intelligence with the hopes of creating a local and secure communication channel between the hardware and management platform Prism. <br><br>Our final concept consisted of:
 
-      </div>
-      <figcaption>Communication diagram</figcaption><br>
+      <ul>
+        <li>A <span> mobile app</span>, to become the block inventory and orchestration layer.</li>
 
-      <p> I pitched this idea to a couple of colleagues, that later expanded to a team of 6 including 3 back-end engineers and 3 designers. We used the company's hackthon to develop this concept to a working proof of concept</p>
+        <li>A <span>smart bezel</span> with NFC technology, containing necessary device information needed for pairing.</li>
+      </ul>
+    </p>
+
+
+
+<!-- Companion app -->
 
     <h3>A. Companion app </h3>
     <p>
-      The mobile app desing improved efficency of creating and mantaining a hardware inventory database, at the same time it was in charge of pairing with the imagining and management services. <br> For our proof of concept we defaulted using Android as our team felt the most comfortable with, and used our management platform (Prism) as a target. The main taskflows included:
-
-      <ol type="A">
-        <li>Adding blocks through scanning of the bezel to create an inventory. </li>
-        <li>Once added, the app can be registered to the target platform.</li>
-        <li>By selecting the blocks, the app will communicate the hardware details to Prism, effectively registering the block.</li>
-      </ol>
+        The application goal was to be minimal, unobtrusive. The user experience and visual language were focused on making the app focused and fast to use. Adding hardware to the inventory was a task our admins will perform multiple times in a day, so we wanted to make it a frictionless as possible. Below the interaction details of the most critical workflows for the app.
     </p>
-
-    <div class='block'  layout='⊡'  >
-      <dialog>
-        <br>
-        <h2>Block registered </h2>
-        <p> Some information here </p>
-      </dialog>
-
-      <div class='phone' layout='⊡'>
-
-
-      </div>
-    </div>
-    <figcaption>Mobile App registration</figcaption><br>
-
-
     <p>
-    The application goal was to be minimal, unobtrusive. The user experience and visual language were focused on making the app simple to use and fast to use. Adding hardware to the inventory was a common task for a datacenter admin so we wanted to make it a frictionless experience.
+      <b>Managing inventory </b><br>
+      To add a block to the catalogue, you just needed to scan the faceplate. All required information was encoded in an NFC sticker on the back of the bezel. This would remove the need of having to manually input block data into excel.
+
+      <div class='block'  layout='⊡'  >
+        <dialog>
+          <br><h2>Block registered </h2>
+          <p> Some information here </p>
+        </dialog>
+        <div class='phone' layout='⊡'></div>
+      </div>
     </p>
+    <br>
+      <p><b>Registering Blocks</b><br>
+      Once a block appears in the list, you can select and add it to Prism or any other service that required the block information. The app was in charge of passing block data back and forward, guaranteeing data integrity in each step of the installation.
+
+      <div class='block'  layout='⊡'  >
+        <dialog>
+          <br><h2>Block registered </h2>
+          <p> Some information here </p>
+        </dialog>
+        <div class='phone' layout='⊡'></div>
+      </div>
+    </p>
+
+    <br>
+      <p><b>Datacenter Mapping</b><br>
+      Using the smartphone position, we could determine the coordinates of the block during a registration event. This would help create a 3-dimensional representation of the datacenter. The information was processed in-device, keeping the information securely within the confines of the local network but allowing datacenter administrator to better determine the exact position of failing hardware.
+    </p>
+
+
+
+
+<!-- Smart Bezel -->
+
 
     <h3>B. Smart bezel </h3>
     <p>
-    We had in our ranks a designer with some previous industrial design experience, he helped shaping the final concept of the bezel we end up using. <br><br> The final concept integrated a <span id='rainbow'>255 color LED</span> strip we could use to transmit status information from the hardware back to our admin and our NFC sticker placed behind the inner side of the bezel with the necesary hardware information to create a link to the app.
+    We had in our ranks a designer with some previous industrial design experience, he helped to shape the final concept of the bezel we end up using. <br><br> The concept integrated a <span id='rainbow'>255 color LED</span> strip we could use to transmit status information from the hardware back to our admin and our NFC sticker placed behind the inner side of the bezel with the required hardware information to pair.
     </p>
 
     <img alt="Picture of a sheet of paper with several drawings of server faceplates" class='article-image' src='img/concept2.png' width="100%"  />
     <figcaption>Design concepts for the bezel</figcaption><br>
+    <p>The final faceplate used a modern design language and proposed using premium materials for its construction, once paired with the management service would be able to show system information through the stip. We captured a couple of use cases for the demo that included:</p>
+    <ol type="A">
+      <li>Block hardware error. </li>
+      <li>Software operations, like updating that is taking place in a specific piece of hardware.</li>
+    </ol>
+    </p>
 
-    <h3> A richer troubleshooting experience </h3>
-    <p>
-      We expanded the original concept for both the bezel and the mobile app to allow datacenter information to be captured locally by using the smartphone functionality by determining the position of the phone during a registration event. This would allow the user to create a 3D space of the server room. The techinical details of how we achieve this are listed in our <u>patent application.</u> </p>
-
-      <div class='block'  layout='⊡'  >
-
-      </div>
-      <figcaption>3D rack registration</figcaption><br>
-
-
-      <p>
-      In addition, the smart bezel onced paired with the management service would be able to show system information trhough the stip. We captured a couple of use cases for the demo that included:</p>
-      <ol type="A">
-        <li>Block hardware error. </li>
-        <li>Software operations, like updating that are taking place in a specific piece of hardware.</li>
-      </ol><br>
-
-      <div class='block'  layout='⊡'  >
-
-      </div>
-      <figcaption>Final demoreel</figcaption><br>
+    <h3> A working prototype </h3>
+    <p> Thanks to a clear goal and effort from the team, delivered a working prototype of the app, the bezel functionality and a excellent pitch for our C-level executives that earned us the award for most creative in that year's hackathon.</p>
+    <p> Two years we were nominated as part of the IFA Consumer Electronic's UX Design awards in Berlin, an international competition for user-centric design solutions that utilize state-of-the-art technologies.</p>
 
 
-    <h3>UX Design awards nomination</h3>
-    <p> In 2018 two years after this concept was showcased in the company, we earned a nomination as part of the IFA Consumer Electronic's UX Design awards in Berlin, an international competition for user-centric design solutions that utilize state-of-the-art technologies.</p>
-
-
-    <img alt="Picture of a server room with plugged devices" class='article-image' src='img/uxaward.jpg' width="100%"  />
-    <figcaption>UX Design Awards - IFA Cosumer Electronic Berlin 2018</figcaption><br>
+    <img alt="UX award ceremony in a enclosed space" class='article-image' src='img/uxaward.jpg' width="100%"  />
+    <figcaption>UX Design Awards - IFA Consumer Electronic Berlin 2018</figcaption><br>
 
     <hr>
     <h3> Did you like this case study? </h3>
@@ -152,14 +158,17 @@
 
       <div layout='⎅'>
         <div class='badge' style="opacity:0;" ></div>
-        <p><b>Awards</b><br>UX Awards Nominee</b>
-        Berlin 2018 <a href='https://ux-design-awards.com/en/teilnehmer/2018/'>💫</a></p>
+        <p>
+          <b>Acknowledgements</b>
+          <br>Nutanix - Most Creative 2016
+          <br>UX Awards Nominee Berlin 2018
+        </p>
       </div>
 
       <div class='recommended' layout='⎅' style='display:none'>
         <div class='badge' style="opacity:0;" ></div>
         <p><b>Recommended articles</b><br>UX Awards Nominee</b>
-        Berlin 2018 <a href='https://ux-design-awards.com/en/teilnehmer/2018/'>💫</a></p>
+        Berlin 2018</p>
       </div>
 
     </aside>

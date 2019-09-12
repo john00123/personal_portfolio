@@ -30,18 +30,18 @@ input[type=range]::-ms-track {
 /* Special styling for WebKit/Blink */
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 8pt;
-  width: 8pt;
+  height: 14pt;
+  width: 33%;
   border-radius: 4pc;
-  background: $grey400;
-  margin-top: -4px;
-  cursor: pointer;
+  background: $blue500;
+  margin-top: -8px;
+  cursor: grab;
 }
 
 /* All the same stuff for Firefox */
 input[type=range]::-moz-range-thumb {
   height: 8pt;
-  width: 12pt;
+  width: 33%;
   border-radius: 4pc;
   background: $blue500;
   cursor: pointer;
@@ -51,7 +51,7 @@ input[type=range]::-moz-range-thumb {
 /* All the same stuff for IE */
 input[type=range]::-ms-thumb {
   height: 8pt;
-  width: 12pt;
+  width: 33%;
   border-radius: 4pc;
   background: $blue500;
   cursor: pointer;

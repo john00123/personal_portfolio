@@ -30,7 +30,7 @@ h2{
   font-size: 16pt;
 }
 
-p, ol > li{
+p, ol > li, ul > li{
   margin-top: 0;
   font-weight: 300;
   font-size: 1em;
@@ -39,11 +39,11 @@ p, ol > li{
   color:$grey700;
 }
 
-ol > li:not(:last-child){
+ol > li:not(:last-child), ul > li:not(:last-child){
   margin-bottom: 10px;
 }
 
-ol{
+ol, ul{
   padding-left: 48px;
   border-left: 3px solid $grey200;
 }
