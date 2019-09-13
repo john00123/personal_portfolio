@@ -13,6 +13,7 @@ body{
 main{
   max-width: 1280px;
   padding: 30px;
+  margin: auto;
 }
 
 article{
@@ -93,11 +94,11 @@ hr{
 //
 @import 'inputs';
 @import 'article';
-
 a{
   color:$blue500;
   text-decoration: none;
   position: relative;
+  will-change: transform;
   &:after{
     content:'';
     position: absolute;
@@ -106,7 +107,7 @@ a{
     height: 1px;
     background-color: $blue500;
     left: 0;
-    transition: transform .15s linear;
+    transition: transform .15s cubic-bezier(0.165, 0.84, 0.44, 1);
     transform-origin: left;
     transform: scaleX(0);
     will-change: transform;
