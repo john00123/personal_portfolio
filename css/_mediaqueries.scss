@@ -1,0 +1,21 @@
+//main:style.scss
+
+@media (max-width: 1000px) {
+  main{
+    flex-direction: column;
+  }
+
+  main > * > *{
+    text-align: left;
+  }
+  aside{
+    margin-left: 0;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .thin, .regular,.normal, .semibold,.bold{
+    font-size: 13pt;
+  }
+
+}

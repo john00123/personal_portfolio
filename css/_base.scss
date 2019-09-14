@@ -1,0 +1,51 @@
+//main:style.scss
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap');
+
+// Colors
+$grey1000: rgba(0,0,60,1);
+$grey900 : rgba(0,0,60, 0.9);
+$grey700 : rgba(0,0,60, 0.7);
+$grey600 : rgba(0,0,60, 0.6);
+$grey400 : rgba(0,0,60, 0.4);
+$grey200 : rgba(0,0,60, 0.04);
+$grey100 : rgba(0,0,60, 0.02);
+
+$blue500 : rgba(0, 85, 255, 0.992157);
+$blue800 : darken($blue500, 20%);
+$blue100 : rgba(0, 85, 255, 0.1);
+
+
+// Size
+$base: 8;
+$tablet: $base * 120pt;
+
+
+html, body{
+  color     : $grey1000;
+  margin    : 0;
+  padding   : 0;
+  box-sizing:border-box;
+}
+
+html, body{
+  font-family: 'Noto Sans', -apple-system,
+  BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing : antialiased;
+}
+
+
+//basic styles
+
+*, * > * { box-sizing:border-box}
+
+*::selection {
+  color: $blue500;
+  background-color: $blue100;
+}
+
+//media queries
+@mixin media($size) {
+  @media only screen and (max-width: $size) { @content; }
+}

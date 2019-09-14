@@ -1,37 +1,15 @@
 // Comment to preproces
-@import 'variables';
-@import 'font';
+@import 'base';
 @import 'layout';
 
 
-body{
-  min-width: 100vw;
-  min-height: 100vh;
-  @include flex(center, center, column)
+
+.block{
+  height: $base * 35pt;
+  padding: 20px;
+  position: relative;
 }
 
-main{
-  max-width: 1280px;
-  padding: 30px;
-  margin: auto;
-}
-
-article{
-  max-width: 80ch;
-  flex-shrink: none;
-}
-
-
-
-aside{
-  display: flex;
-  position: sticky;
-  top:80px;
-  margin-left: 60px;
-  padding-left: 20px;
-  max-width: 40ch;
-  p{ margin-top: 0;}
-}
 
 figure, .block{
   width: 100%;
@@ -51,38 +29,12 @@ hr{
   border: none;
 }
 
-.badge{
-  background-color: $blue500;
-  border-radius: 4pc;
-  flex-shrink: 0;
-  width: 16pt;
-  padding: 5pt;
-  margin-right: 16px;
-  h3{
-    color:white;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-  }
-}
-
-
-.sq{
-  height: 40pt;
-  width: 40pt;
-  background-color: lavender;
-  margin-right: 16pt;
-}
 
 .text{
   flex-grow: 1;
   h3, p{margin: 0;}
 }
-.block{
-  height: 400px;
-  padding: 20px;
-  position: relative;
-}
+
 .small-card{
   background-color: white;
   border-radius: 4pt;
@@ -93,26 +45,5 @@ hr{
 
 //
 @import 'inputs';
-@import 'article';
-a{
-  color:$blue500;
-  text-decoration: none;
-  position: relative;
-  will-change: transform;
-  &:after{
-    content:'';
-    position: absolute;
-    bottom: -1px;
-    width: 100%;
-    height: 1px;
-    background-color: $blue500;
-    left: 0;
-    transition: transform .15s cubic-bezier(0.165, 0.84, 0.44, 1);
-    transform-origin: left;
-    transform: scaleX(0);
-    will-change: transform;
-  }
-  &:hover::after{
-    transform: scaleX(1);
-  }
-}
+@import 'articles';
+@import 'mediaqueries';

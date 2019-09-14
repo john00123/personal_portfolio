@@ -1,86 +1,25 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap");
-* {
-  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html, body {
   color: #00003c;
-}
-
-* ::selection {
-  background-color: rgba(0, 85, 255, 0.1);
-  color: rgba(0, 85, 255, 0.992157);
-}
-
-label {
-  font-size: 12pt;
-  color: rgba(0, 0, 60, 0.4);
-}
-
-h1 {
-  font-size: 36pt;
-  font-weight: 500;
-  letter-spacing: -1.5;
-}
-
-h2 {
-  font-weight: 400;
-  font-size: 16pt;
-}
-
-p, ol > li, ul > li {
-  margin-top: 0;
-  font-weight: 300;
-  font-size: 1em;
-  line-height: 1.75;
-  letter-spacing: -0.12;
-  color: rgba(0, 0, 60, 0.7);
-}
-
-ol > li:not(:last-child), ul > li:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-ol, ul {
-  padding-left: 48px;
-  border-left: 3px solid rgba(0, 0, 60, 0.04);
-}
-
-.thin, .regular, .normal, .semibold, .bold {
-  font-size: 17pt;
-  font-family: 'Nutanix_Soft', sans-serif;
-  line-height: 2;
-  padding: 0 8pt;
-  margin-left: 16pt;
-}
-
-.thin {
-  font-weight: 200;
-}
-
-.regular {
-  font-weight: 400;
-}
-
-.normal {
-  font-weight: 500;
-}
-
-.semibold {
-  font-weight: 600;
-}
-
-.bold {
-  font-weight: 800;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
+  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 *, * > * {
   box-sizing: border-box;
+}
+
+*::selection {
+  color: rgba(0, 85, 255, 0.992157);
+  background-color: rgba(0, 85, 255, 0.1);
 }
 
 [layout='◨'] {
@@ -132,98 +71,10 @@ html, body {
   flex-direction: column;
 }
 
-[grid='yes'] {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
-  grid-gap: 20px;
-  width: 100%;
-}
-
-footer {
-  background: rgba(0, 0, 60, 0.04);
-  width: 100vw;
-  height: 300px;
-  margin-top: 40px;
-}
-
-.article {
+.block {
+  height: 280pt;
+  padding: 20px;
   position: relative;
-  margin-left: 80px;
-}
-
-.article h3, .article p {
-  margin: 0;
-}
-
-.article h3 {
-  margin-top: 14px;
-}
-
-.article::before {
-  content: 'A';
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: rgba(0, 85, 255, 0.992157);
-  height: 40pt;
-  width: 40pt;
-  position: absolute;
-  top: 13px;
-  color: white;
-  font-size: 20px;
-  left: -80px;
-  border-radius: 2px;
-}
-
-@media (max-width: 980px) {
-  main {
-    flex-direction: column !important;
-  }
-  main > * > * {
-    text-align: left !important;
-  }
-  aside {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-    width: 100% !important;
-  }
-  .thin, .regular, .normal, .semibold, .bold {
-    font-size: 13pt;
-  }
-}
-
-body {
-  min-width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-main {
-  max-width: 1280px;
-  padding: 30px;
-  margin: auto;
-}
-
-article {
-  max-width: 80ch;
-  flex-shrink: none;
-}
-
-aside {
-  display: flex;
-  position: sticky;
-  top: 80px;
-  margin-left: 60px;
-  padding-left: 20px;
-  max-width: 40ch;
-}
-
-aside p {
-  margin-top: 0;
 }
 
 figure, .block {
@@ -244,41 +95,12 @@ hr {
   border: none;
 }
 
-.badge {
-  background-color: rgba(0, 85, 255, 0.992157);
-  border-radius: 4pc;
-  flex-shrink: 0;
-  width: 16pt;
-  padding: 5pt;
-  margin-right: 16px;
-}
-
-.badge h3 {
-  color: white;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-}
-
-.sq {
-  height: 40pt;
-  width: 40pt;
-  background-color: lavender;
-  margin-right: 16pt;
-}
-
 .text {
   flex-grow: 1;
 }
 
 .text h3, .text p {
   margin: 0;
-}
-
-.block {
-  height: 400px;
-  padding: 20px;
-  position: relative;
 }
 
 .small-card {
@@ -290,11 +112,8 @@ hr {
 
 input[type=range] {
   -webkit-appearance: none;
-  /* Hides the slider so that custom slider can be made */
   width: 100%;
-  /* Specific width is required for Firefox. */
   background: transparent;
-  /* Otherwise white in Chrome */
   position: relative;
 }
 
@@ -304,16 +123,14 @@ input[type=range]::-webkit-slider-thumb {
 
 input[type=range]:focus {
   outline: none;
-  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
 }
 
 input[type=range]::-ms-track {
   width: 100%;
   cursor: pointer;
-  /* Hides the slider so custom styles can be added */
+  color: transparent;
   background: transparent;
   border-color: transparent;
-  color: transparent;
 }
 
 /* Special styling for WebKit/Blink */
@@ -328,16 +145,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 /* All the same stuff for Firefox */
-input[type=range]::-moz-range-thumb {
-  height: 8pt;
-  width: 33%;
-  border-radius: 4pc;
-  background: rgba(0, 85, 255, 0.992157);
-  cursor: pointer;
-}
-
-/* All the same stuff for IE */
-input[type=range]::-ms-thumb {
+input[type=range]::-moz-range-thumb, input[type=range]::-ms-thumb {
   height: 8pt;
   width: 33%;
   border-radius: 4pc;
@@ -357,30 +165,117 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   background: rgba(0, 0, 60, 0.04);
 }
 
-.title {
-  margin-bottom: 0;
+article {
+  padding: 32pt;
+  max-width: 1280px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
-.description {
+@media only screen and (max-width: 960pt) {
+  article {
+    flex-direction: column;
+  }
+}
+
+main {
+  max-width: 80ch;
+  flex-shrink: none;
+}
+
+article, main {
+  margin: auto;
+}
+
+aside {
+  position: sticky;
+  top: 80pt;
+  margin-left: 64pt;
+  max-width: 40ch;
+}
+
+aside p {
+  margin-top: 0;
+}
+
+aside, main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 24pt;
+  width: 100%;
+  position: relative;
+}
+
+label {
+  font-size: 12pt;
   color: rgba(0, 0, 60, 0.4);
 }
 
-article > p {
-  text-justify: inter-character;
+h1 {
+  font-size: 36pt;
+  font-weight: 500;
+  letter-spacing: -1.5;
 }
 
-quote {
-  color: rgba(0, 0, 60, 0.6);
-  padding: 20px 0;
+h2 {
+  font-weight: 400;
+  font-size: 16pt;
+}
+
+p, ol > li, ul > li {
+  margin-top: 0;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.75;
+  letter-spacing: -0.12;
+  color: rgba(0, 0, 60, 0.7);
+}
+
+ol > li:not(:last-child), ul > li:not(:last-child) {
+  margin-bottom: 8;
+}
+
+ol, ul {
+  padding-left: 40pt;
+  margin-bottom: 24pt;
+  border-left: 3px solid rgba(0, 0, 60, 0.04);
+}
+
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 100%;
+  background-color: rgba(0, 0, 60, 0.04);
+  height: 1px;
+}
+
+header > .title {
+  margin-bottom: 0;
+}
+
+header > .description {
+  color: rgba(0, 0, 60, 0.4);
 }
 
 figcaption {
   color: rgba(0, 0, 60, 0.4);
-  margin: 8pt 0 0 0;
+  margin: 16pt 0 24pt 0;
 }
 
 article p {
-  margin-bottom: 30px;
+  margin-bottom: 24pt;
 }
 
 .box {
@@ -448,6 +343,62 @@ dialog::before {
   z-index: 1;
 }
 
+main a {
+  color: rgba(0, 85, 255, 0.992157);
+  position: relative;
+  text-decoration: none;
+}
+
+main a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 85, 255, 0.992157);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  transform-origin: left;
+  -webkit-transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+
+main a:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.thin, .regular, .normal, .semibold, .bold {
+  font-size: 17pt;
+  font-family: 'Nutanix_Soft', sans-serif;
+  line-height: 2;
+  padding: 0 8pt;
+  margin-left: 16pt;
+}
+
+.thin {
+  font-weight: 200;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.normal {
+  font-weight: 500;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 800;
+}
+
 .sizing {
   margin-top: -40px;
   font-size: 80px;
@@ -456,51 +407,34 @@ dialog::before {
   will-change: font-size;
 }
 
-#nutanix-soft-sizing {
+.slider {
   margin: 0;
-  padding: 0 20px;
+  bottom: 16pt;
+  padding: 0 16pt;
   position: absolute;
-  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
-#font-sizing {
-  margin: 0 20px;
+.slider input {
+  margin: 0 16pt;
 }
 
-.highlight {
-  background-color: rgba(0, 85, 255, 0.1);
-}
-
-hr {
-  border: 0;
-  clear: both;
-  display: block;
-  width: 100%;
-  background-color: rgba(0, 0, 60, 0.04);
-  height: 1px;
-}
-
-a {
-  color: rgba(0, 85, 255, 0.992157);
-  text-decoration: none;
-  position: relative;
-  will-change: transform;
-}
-
-a:after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  width: 100%;
-  height: 1px;
-  background-color: rgba(0, 85, 255, 0.992157);
-  left: 0;
-  transition: transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transform-origin: left;
-  transform: scaleX(0);
-  will-change: transform;
-}
-
-a:hover::after {
-  transform: scaleX(1);
+@media (max-width: 1000px) {
+  main {
+    flex-direction: column;
+  }
+  main > * > * {
+    text-align: left;
+  }
+  aside {
+    margin-left: 0;
+    padding-left: 0;
+    width: 100%;
+  }
+  .thin, .regular, .normal, .semibold, .bold {
+    font-size: 13pt;
+  }
 }
