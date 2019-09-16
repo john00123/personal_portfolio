@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 
     $('body').fadeOut(250, function(){
-      $('body').load(href).fadeIn(250)
+      $('body').load(href).scrollTop( 300 ).fadeIn(250)
     })
 
 
