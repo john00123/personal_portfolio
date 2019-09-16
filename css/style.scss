@@ -3,6 +3,23 @@
 @import 'layout';
 
 
+nav{
+  @include  flex(flex-start, space-between, row);
+  width: 100%;
+  height: $base * 10pt;
+  position: sticky;
+  top:0;
+  z-index: -1;
+}
+
+.pages{
+  @include flex(center, flex-start, row);
+  list-style: none;
+  max-width: 1480px;
+  margin: auto;
+  a{margin-right: 20px;}
+}
+
 hr{
   background-color: $grey100;
   height: 1px;
