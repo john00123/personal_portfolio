@@ -1,7 +1,7 @@
 $(document).ready(function() {
-   $('#font-sizing').on('change',function(){
+   $('#character-size').on('change',function(){
      let size = $(this).val();
-     $('.sizing').css("font-size",`${size}pt`);
+     $('.character-display').css("font-size",`${size}pt`);
    })
 
 

@@ -1,36 +1,46 @@
 //main:style.scss
 
-.thin, .regular,.normal, .semibold,.bold{
-  font-size: 17pt;
-  font-family: 'Nutanix_Soft', sans-serif;
-  line-height: 2;
-  padding: 0 8pt;
-  margin-left: 16pt;
-}
+.thin    { font-weight: 200}
+.regular { font-weight: 400}
+.normal  { font-weight: 500}
+.semibold{ font-weight: 600}
+.bold    { font-weight: 800}
 
-.thin{
-  font-weight: 200;
-}
-.regular{ font-weight: 400;}
-.normal{ font-weight: 500;}
-.semibold{ font-weight: 600;}
-.bold{ font-weight: 800;}
-
-.sizing{
-  margin-top:-40px;
-  font-size: 80px;
+.character-display, .type-showcase{
   font-family: 'Nutanix_Soft', sans-serif!important;
-  transition: font-size 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  will-change: font-size;
 }
 
+// font-weights
+
+.type-showcase{
+  margin: none;
+  line-height: 2;
+  font: 17pt/2 'Nutanix_Soft', sans-serif;
+}
+
+.type-showcase ul{
+  padding: 0;
+  border : none;
+  li {list-style: none}
+}
+
+
+// font-scale
+
+.character-display{
+  margin-top:-40px;
+  font-size : 80px;
+  letter-spacing: -1.5;
+  will-change: font-size;
+  transition : font-size 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
 
 .slider{
   margin : 0;
-  bottom : $base * 2pt;
+  bottom :   $base * 2pt;
   padding: 0 $base * 2pt;
   position: absolute;
   @include flex(center, space-between, row);
-
-  input{  margin: 0 $base * 2pt ;}
 }
+
+.slider input{ margin: 0 $base * 2pt }
