@@ -52,6 +52,42 @@ html.is-animating .transition-fade {
   opacity: 0;
 }
 
+.articles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  width: 1485px;
+  margin: auto;
+  background-color: ALICEBLUE;
+  height: 690px;
+  max-height: 800px;
+}
+
+.tile {
+  width: 465px;
+  border-radius: 8pt;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  position: relative;
+}
+
+.large {
+  min-height: 660px;
+  background-color: lavender;
+}
+
+.medium {
+  min-height: 460px;
+  background-color: thistle;
+}
+
+.small {
+  flex-direction: row;
+  min-height: 170px;
+  background-color: plum;
+}
+
 input[type=range] {
   -webkit-appearance: none;
   width: 100%;
