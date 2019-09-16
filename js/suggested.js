@@ -9,7 +9,9 @@ $(document).ready(function() {
     $('body').fadeOut(250, function(){
       $('body').load(href).scrollTop(0).fadeIn(250)
     })
-
-
   })
 });
+
+window.addEventListener("popstate", function(event) {
+  location.reload();
+}
