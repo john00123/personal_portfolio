@@ -21,6 +21,16 @@ html, body {
   background-color: rgba(0, 85, 255, 0.1);
 }
 
+body {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform;
+}
+
+.gone {
+  opacity: 0;
+  transform: translateY(250px);
+}
+
 hr {
   background-color: rgba(0, 0, 60, 0.02);
   height: 1px;
