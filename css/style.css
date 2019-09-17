@@ -313,7 +313,7 @@ aside, main {
 }
 
 main {
-  max-width: 80ch;
+  max-width: 96ch;
   flex-shrink: none;
 }
 
@@ -321,7 +321,7 @@ aside {
   position: sticky;
   top: 80pt;
   margin-left: 64pt;
-  max-width: 40ch;
+  max-width: 32ch;
 }
 
 img, video, .block {

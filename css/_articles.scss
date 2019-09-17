@@ -15,7 +15,7 @@ article{
 aside, main{ @include flex(flex-start) }
 
 main{
-  max-width  : $base * 10ch;
+  max-width  : $base * 12ch;
   flex-shrink: none;
 }
 
@@ -23,7 +23,7 @@ aside{
   position: sticky;
   top        : $base * 10pt;
   margin-left: $base * 8pt ;
-  max-width  : $base * 5ch ;
+  max-width  : $base * 4ch ;
 }
 
 //images
