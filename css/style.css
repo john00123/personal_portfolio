@@ -520,6 +520,15 @@ dialog::before {
     max-height: 1300px;
     width: 960px;
   }
+  #code {
+    max-height: 1400px;
+  }
+  #code .tile:nth-child(1) {
+    order: 5;
+  }
+  #code .tile:nth-child(3) {
+    order: 4;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -530,7 +539,6 @@ dialog::before {
     max-width: 692px;
   }
   .articles-grid {
-    max-height: 1300px;
     width: 692px;
   }
 }
