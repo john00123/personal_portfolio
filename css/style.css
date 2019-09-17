@@ -189,22 +189,22 @@ body {
 }
 
 #bezel {
-  background-color: #627163;
+  background-color: rgba(0, 0, 60, 0.02);
   background-size: cover;
 }
 
 #ef {
-  background-color: #627163;
+  background-color: rgba(0, 85, 255, 0.992157);
   background-size: cover;
 }
 
 #font {
-  background-color: #627163;
+  background-color: rgba(0, 0, 60, 0.02);
   background-size: cover;
 }
 
 #design-system {
-  background-color: #627163;
+  background-color: rgba(0, 85, 255, 0.992157);
   background-size: cover;
 }
 
