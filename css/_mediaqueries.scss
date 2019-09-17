@@ -58,6 +58,10 @@
     width: auto;
   }
 
+  #code{
+    max-height: none;
+  }
+
   .tile.small a{flex-direction: column}
 
   .small .image-wrapper, .medium .image-wrapper{

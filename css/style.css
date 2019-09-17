@@ -556,6 +556,9 @@ dialog::before {
     max-height: none;
     width: auto;
   }
+  #code {
+    max-height: none;
+  }
   .tile.small a {
     flex-direction: column;
   }
