@@ -103,25 +103,33 @@ body{
   display: block;
   background-color: $grey100;
   width: 100%;
+  background-size: cover;
+  background-position: center;
+  // overflow: hidden;
+  position: relative;
 }
 
 #bezel{
   // background: url('../img/articles/bezel.png');
   background-color: $grey100;
-  background-size: cover;
+
 }
 #ef{
-  // background: url('../img/articles/ef.png');
   background-color: $blue500;
+  background-image: url('../img/articles/ef.svg');
+  background-position: center;
   background-size: cover;
 }
+
 #font{
-  // background: url('../img/articles/font.png');
   background-color: $grey100;
-  background-size: cover;
+  background: url('../img/articles/font.svg');
+  background-position: center;
 }
 #design-system{
-  // background: url('../img/articles/design-system.png');
-  background-color: $blue500;
-  background-size: cover;
+  background-size:cover;
+  @include flex(start,start,row);
+  flex-wrap: wrap;
+  overflow: hidden;
+
 }

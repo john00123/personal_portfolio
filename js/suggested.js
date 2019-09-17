@@ -21,3 +21,16 @@ $(window).on('popstate', function (e) {
       $('body').load('index.html')
     }
 });
+
+
+$(function() {
+
+  $.attractHover(
+    '.js-attract-hover',
+    {
+      proximity: 100,
+      magnetism: 2
+    }
+  );
+
+});

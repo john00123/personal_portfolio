@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500px" height="500px" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch Beta 58 (84661) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch Beta.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#DEE7FA" x="-33.5" y="193.5" width="541" height="113"></rect>
+        <rect id="Rectangle" fill="#0053FF" opacity="0.101818266" x="292" y="194" width="16" height="112"></rect>
+        <rect id="Rectangle-Copy-4" fill="#0053FF" opacity="0.101818266" x="192" y="194" width="16" height="112"></rect>
+        <path d="M253.030928,194 C272.515464,194 292,205.928994 292,225.589744 L292,298.489152 C292,301.140039 289.618557,304.674556 285.505155,304.674556 C281.391753,304.674556 279.010309,301.360947 279.010309,298.268245 L279.010309,288.548323 C274.463918,298.047337 259.525773,306 245.670103,306 C227.268041,306 208,294.512821 208,271.317554 C208,249.226824 224.886598,239.285996 246.103093,239.065089 L279.010309,239.065089 L279.010309,226.252465 C279.010309,214.102564 267.752577,206.370809 251.731959,206.370809 C240.690722,206.370809 232.680412,209.463511 224.020619,216.532544 C221.85567,218.299803 217.742268,218.741617 215.14433,216.09073 C212.329897,213.218935 214.061856,208.800789 216.226804,207.033531 C226.618557,198.197239 238.309278,194 253.030928,194 Z M245.421053,294 C261.338346,294 279,282.753846 279,259.6 L279,251 L250.218045,251 C230.593985,251 221,258.276923 221,271.287179 C221,285.841026 232.338346,294 245.421053,294 Z" id="a" fill="#0053FF" fill-rule="nonzero"></path>
+        <polygon id="Rectangle" fill="#0053FF" points="320 155 346 181 320 181"></polygon>
+        <polygon id="Rectangle" fill="#00003C" points="154 319 180 319 180 345"></polygon>
+        <path d="M266,155.192197 L234,155.307803" id="Path-3" stroke="#E5EDFF" stroke-width="3" fill="#E5EDFF" stroke-linecap="round" stroke-dasharray="0,8"></path>
+        <path d="M266,345.192197 L234,345.307803" id="Path-3-Copy" stroke="#E5EDFF" stroke-width="3" fill="#E5EDFF" stroke-linecap="round" stroke-dasharray="0,8"></path>
+    </g>
+</svg>
