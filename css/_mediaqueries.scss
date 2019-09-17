@@ -9,13 +9,6 @@
     font-size: 13pt;
   }
 
-  .box{
-    top:0px;
-    left:0px;
-    width:39px;
-    height:39px;
-  }
-
 }
 @media (max-width: 1600px) {
 
@@ -45,6 +38,13 @@
 
   .articles-grid{ width: 692px}
 
+  #design-system{
+    grid-template-columns: repeat(auto-fill, 54px);
+  }
+  .box{
+    width:39px;
+    height:39px;
+  }
 }
 
 @media (max-width: 800px) {

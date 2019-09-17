@@ -78,43 +78,6 @@ html.is-animating .transition-fade {
   opacity: 0;
 }
 
-.box {
-  position: relative;
-  background: rgba(0, 85, 255, 0.992157);
-  font-size: 10px;
-  top: 0px;
-  left: 0px;
-  display: inline-block;
-  margin: 20px;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  color: white;
-  text-align: center;
-  line-height: 20px;
-  will-change: transform;
-}
-
-.attract-hover {
-  display: inline-block;
-}
-
-.attract-hover-easing {
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.attract-hover,
-.attract-hover-proximity {
-  display: inline-block;
-  border-radius: 100%;
-  border: 1px dashed rgba(0, 0, 0, 0.2);
-}
-
-.attract-hover-proximity {
-  padding: 50px;
-  margin-top: 50px;
-}
-
 body {
   padding: 16pt;
 }
@@ -226,10 +189,13 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  justify-content: space-between;
 }
 
 #bezel {
-  background-color: rgba(0, 0, 60, 0.02);
+  background: url("../img/admin.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 #ef {
@@ -247,12 +213,22 @@ body {
 
 #design-system {
   background-size: cover;
-  display: flex;
-  align-items: start;
-  justify-content: start;
-  flex-direction: row;
-  flex-wrap: wrap;
-  overflow: hidden;
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  padding: 30px;
+  justify-items: center;
+}
+
+#design-system .box {
+  align-self: center;
+  background: rgba(0, 85, 255, 0.992157);
+  font-size: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  color: white;
 }
 
 input[type=range] {
@@ -557,12 +533,6 @@ dialog::before {
   .type-showcase li {
     font-size: 13pt;
   }
-  .box {
-    top: 0px;
-    left: 0px;
-    width: 39px;
-    height: 39px;
-  }
 }
 
 @media (max-width: 1600px) {
@@ -593,6 +563,13 @@ dialog::before {
   }
   .articles-grid {
     width: 692px;
+  }
+  #design-system {
+    grid-template-columns: repeat(auto-fill, 54px);
+  }
+  .box {
+    width: 39px;
+    height: 39px;
   }
 }
 
