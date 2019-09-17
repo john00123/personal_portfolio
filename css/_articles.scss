@@ -6,7 +6,7 @@
 article, main{ margin: auto }
 
 article{
-  padding: $base * 2pt;
+  padding: $base * 1pt;
   max-width: 1280px;
   @include flex(flex-start, space-between, row);
   @include media($tablet){ flex-direction: column;}

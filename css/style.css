@@ -291,7 +291,7 @@ article, main {
 }
 
 article {
-  padding: 16pt;
+  padding: 8pt;
   max-width: 1280px;
   display: flex;
   align-items: flex-start;
