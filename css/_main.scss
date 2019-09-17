@@ -1,13 +1,19 @@
 //main:style.scss
 
 body{
-  padding: $base *2pt;
+  padding: $base * 2pt;
 }
 
 .main-section{
   max-width: 1485px;
   margin: auto;
   background-color: white;
+
+  h2, p{
+    text-align: center;
+    max-width: 80ch;
+    margin: auto;
+  }
 }
 
 
@@ -32,26 +38,18 @@ body{
   display: flex;
 }
 
+
+
 .large{
   height: 660px;
   background-color: $grey100;
-  .image-wrapper{
-    display: block;
-    background-color: $grey100;
-    width: 100%;
-    height: calc(660px - 170px);
-  }
+  .image-wrapper{ height: calc(660px - 170px)}
 }
 
 .medium{
   height: 460px;
   background-color: $grey100;
-  .image-wrapper{
-    display: block;
-    background-color: $grey100;
-    width: 100%;
-    height: calc(460px - 170px);
-  }
+  .image-wrapper{ height: calc(460px - 170px)}
 }
 
 .small{
@@ -60,8 +58,6 @@ body{
   background-color: $grey100;
 
   .image-wrapper{
-    display: block;
-    background-color: $grey100;
     width: 170px;
     height: 170px;
     flex-shrink: 0;
@@ -98,4 +94,34 @@ body{
 .text-wrapper {
   h2{ margin: 0; font-size: 14pt;}
   p{ margin: 0}
+}
+
+
+//image assigment
+
+.image-wrapper{
+  display: block;
+  background-color: $grey100;
+  width: 100%;
+}
+
+#bezel{
+  // background: url('../img/articles/bezel.png');
+  background-color: #627163;
+  background-size: cover;
+}
+#ef{
+  // background: url('../img/articles/ef.png');
+  background-color: #627163;
+  background-size: cover;
+}
+#font{
+  // background: url('../img/articles/font.png');
+  background-color: #627163;
+  background-size: cover;
+}
+#design-system{
+  // background: url('../img/articles/design-system.png');
+  background-color: #627163;
+  background-size: cover;
 }
