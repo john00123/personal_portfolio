@@ -26,6 +26,11 @@ hr{
   border: none;
 }
 
+label{
+  font-size: 11pt;
+  margin-top: 20px;
+  color:$grey400;
+}
 
 .text{
   flex-grow: 1;

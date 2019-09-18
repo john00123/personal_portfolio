@@ -16,6 +16,18 @@ body{
   }
 }
 
+.intro{
+
+  margin-bottom: $base  * 8pt;
+  // background-color: $grey100;
+}
+
+mark{
+  background-color: $blue100;
+  color:$blue500;
+  padding: 0 $base * 0.5pt;
+}
+
 
 .articles-grid{
   display: flex;
