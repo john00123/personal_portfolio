@@ -1,12 +1,13 @@
 //main:style.scss
 
-body{
-  padding: $base * 2pt;
-}
+body  { padding: $base * 2pt }
+
+.intro{ margin-bottom: $base  * 8pt }
 
 .main-section{
   max-width: 1485px;
   margin: auto;
+  margin-bottom: $base * 4pt;
   background-color: white;
 
   h2, p{
@@ -14,23 +15,20 @@ body{
     max-width: 80ch;
     margin: auto;
   }
+
+  h2 { margin-bottom: $base * 2pt;}
 }
 
-.intro{
-
-  margin-bottom: $base  * 8pt;
-  // background-color: $grey100;
-}
 
 mark{
-  background-color: $blue100;
   color:$blue500;
+  background: $blue100;
   padding: 0 $base * 0.5pt;
 }
 
 
 .articles-grid{
-  display: flex;
+  @include flex()
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
@@ -46,10 +44,11 @@ mark{
   margin-bottom: 30px;
   margin-right: 30px;
   position: relative;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transform: matrix(1, 0, 0, 1, 0, 0), translateZ(0);
   display: flex;
+  overflow: hidden;
 }
-
 
 
 .large{
@@ -88,10 +87,36 @@ mark{
   @include flex(flex-start, flex-start, column);
 }
 
+
 .small.tile a{
   flex-direction:row;
 }
 
+
+.tile{
+  animation: .8s cubic-bezier(0.165, 0.84, 0.44, 1) both fade-in;
+}
+
+@for $i from 1 through 8 {
+  .tile {
+    &:nth-child(#{$i}) {
+      animation-delay: $i * (1s/$base);
+    }
+  }
+}
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, $base * 3pt ,0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 
 
 .text-wrapper{
@@ -112,14 +137,14 @@ mark{
 //image assigment
 
 .image-wrapper{
-  display: block;
+  display: flex;
   background-color: $grey100;
   width: 100%;
   background-size: cover;
   background-position: center;
-  // overflow: hidden;
   position: relative;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 #bezel{
@@ -137,19 +162,25 @@ mark{
 }
 
 #font{
-  background-color: $grey100;
+  background-color: $blue500;
   background: url('../img/articles/font.svg');
+  // background: url('https://c10.patreonusercontent.com/3/eyJwIjoxfQ%3D%3D/patreon-media/p/post/33522190/9688dd25f95d431a90413da7a7b350b4/1.png?token-time=1589853611&token-hash=oNdfh0L1LbysS6R58G9brsw1E8P1aXXlhkPn5_K6SWM%3D');
   background-position: center;
 }
 
 #design-system{
-  background-size:cover;
-  // background: url('../img/articles/design-system.svg');
+  background-size:contain;
+  // background: url('../img/diamond.png');
   background-position: center;
   display: grid;
   grid-template-columns: repeat(auto-fill, 100px);
-  padding: 30px;
+  padding: 0;
+  overflow: hidden;
   justify-items: center;
+  video{
+    margin:0;
+    padding: 0;
+  }
   .box{
     align-self: center;
     background: $blue500;

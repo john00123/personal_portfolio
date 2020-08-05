@@ -9,6 +9,8 @@
     font-size: 13pt;
   }
 
+
+
 }
 @media (max-width: 1600px) {
 
@@ -45,13 +47,17 @@
     height:39px;
   }
 
-
+  .small{height: 460px}
+  .tile.small a{flex-direction: column}
+  .small .image-wrapper{
+    height: calc(460px - 170px);
+    width: 100%;
+  }
   .intro{
     flex-direction: column;
   }
 }
 @media (max-width: 800px) {
-
 
 
   .tile{

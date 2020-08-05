@@ -14,52 +14,46 @@
     <header>
       <h1 class='title'>Smart Bezel</h1>
       <p class='description'>Intelligent block faceplate and server rack mapping<br> U.S. Application No. 16/211,054</p>
+      <p>Role: Team Lead / Inventor</p>
     </header>
 
     <!-- Intro -->
-    <p>In this project, I had the opportunity to explore design solutions outside our product portfolio. <br>During that time, I saw an area were design could have a significant impact. The blocks installation experience.</p>
+    <p>This project focuses on design solutions outside our digital product portfolio. An area were design could have a significant impact and a true value proposition for the early phases of our customer journey.</p>
 
     <!-- Context -->
     <section>
-      <h3>Some context</h3>
-      <p>Back in 2016, <a href='https://www.webscaleworks.com/Hardware-Platforms.asp' target="_blank">Nutanix hardware</a> installation process was fragmented across multiple platforms that didn't communicate with each other. This forced datacenter admins to retype information and keep track of every change throughout the installation process. It was for lack of a better term an inefficient and error-prone process to the company, partners, and customers who had to go through installing our hardware.</p>
-      <p>Nutanix, at the moment, provided <a href='https://en.wikipedia.org/wiki/On-premises_software' target="_blank">on-premises</a> solutions. Which meant that data privacy was of the utmost importance; this was something I needed to consider if I was to try to solve for the datacenter admin issues.</p>
+      <h3>The Challenge</h3>
+      <p>Back in 2016, <a href='https://www.webscaleworks.com/Hardware-Platforms.asp' target="_blank">Nutanix's hardware</a> installation process was fragmented. <br>Data-center admins have to track changes across three different interfaces throughout the installation process. They write down hardware information to inventory and deploy infrastructure.<br> It is for lack of a better term, an inefficient and error-prone process that incurred costs for the company, and affects our partners and customers' service reliability.</p>
 
-      <img alt="Picture of a server room with plugged devices" class='article-image' src='img/admin.jpg' width="100%"/>
+      <img loading="lazy" alt="Picture of a server room with plugged devices" class='article-image' src='img/admin.jpg' width="100%"/>
 
-      <figcaption> Victor, our datacenter admin, talking to the team
+      <figcaption> Victor (our data-center administrator), is explaining how the infrastructure installation process works.
       </figcaption>
 
     </section>
 
     <!-- Goals -->
     <section>
-      <h3>Goals and team</h3>
-      <p> The first step of this process was to have clarity of the problem that I was trying to solve. I captured the installation pain-points and translate them to goals for the project:
-        <ol type="A">
-          <li>Reduce tedious manual data-entry workflows.</li>
-          <li>Reduce the number of services they needed to interact with</li>
-          <li>Provide more precise information from the hardware for troubleshooting.</li>
-        </ol>
+      <h3>Goals</h3>
+      <p> The first step was to capture the installation pain-points from our previous conversations with Admins and translate them into goals:
+        <ul>
+          <li>Optimize manual data-entry workflows.</li>
+          <li>Reduce multi-service dependencies.</li>
+          <li>Improve information precission for troubleshooting.</li>
+        </ul>
       </p>
-      <p>Since the company hackathon was around the corner, I wanted to use this opportunity to build something creative, elegant, but at the same time with useful applications for the datacenter operations.</p> <p>I pitched the general idea to a couple of co-workers that wanted to participate in the project. Later that week three back-end engineers reached out completing a group of 6. The team was essential to the success of the project, each one with a complementary skill set that took this project from an idea into a working prototype. </p>
 
-      <p>Rethinking the look of our bezel was also part of this project, at the moment, its design was outdated and in need of a refresh. This became the place in which we could add some intelligence with the hopes of creating a local and secure communication channel between the hardware and management platform Prism. </p> <p>Our final concept consisted of:</p>
-
-      <ul style='margin-bottom:20pt'>
-        <li>A <span> mobile app</span>, to become the block inventory and orchestration layer.</li>
-
-        <li>A <span>smart bezel</span> containing device information for pairing.</li>
-      </ul>
+      <p> After some ideation rounds the proposed solution consisted of a two piece solution: A mobile app and a complementary hardware component.</p>
+      <p>I pitched the idea to a group of designers and three back-end engineers. This team was essential to the project's success, each one with a complementary skill that took this project from concept into a working prototype.</p>
     </section>
 
     <!-- Companion app -->
     <section>
-      <h3>A. Companion app </h3>
-      <p>The application goal was to be minimal, unobtrusive. The user experience and visual language were focused on making the app focused and fast to use. Adding hardware to the inventory was a task our admins will perform multiple times in a day, so we wanted to make it a frictionless as possible. Below the interaction details of the most critical workflows for the app.</p>
+      <h3>Solution: Mobile app </h3>
+      <p>The application goal was to be minimal, unobtrusive. The user experience and visual language remained focused to prioritize on speed and convenience. <br> Adding hardware to the inventory was a task our admins would perform multiple times in a day, so we wanted to make it a frictionless one. Below the interaction details of the most critical workflows for the app.</p>
 
       <h4>Managing inventory </h4>
-      <p>To add a block to the catalogue, you just needed to scan the faceplate. All required information was encoded in an NFC sticker on the back of the bezel. This would remove the need of having to manually input block data into excel.</p>
+      <p>To add a block to the catalog, you just needed to scan the faceplate. All required information was encoded in an NFC sticker on the back of the bezel, removing the need to manually input block data.</p>
 
       <div class='block'>
         <dialog>
@@ -70,7 +64,7 @@
       </div>
 
       <h4>Registering Blocks</h4>
-      <p>Once a block appears in the list, you can select and add it to Prism or any other service that required the block information. The app was in charge of passing block data back and forward, guaranteeing data integrity in each step of the installation.</p>
+      <p>Once a block appears on the list, you can select and add it to Prism or any other service that required the block information. The app was in charge of passing block data back and forward, guaranteeing data integrity in each step of the installation.</p>
 
       <div class='block'>
         <dialog>
@@ -81,28 +75,27 @@
       </div>
 
       <h4>Datacenter Mapping</h4>
-      <p>Using the smartphone position, we could determine the coordinates of the block during a registration event. This would help create a 3-dimensional representation of the datacenter. The information was processed in-device, keeping the information securely within the confines of the local network but allowing datacenter administrator to better determine the exact position of failing hardware.</p>
+      <p>Using the smartphone position, we could determine the coordinates of the block during a registration event. The phone would help create a 3-dimensional representation of the data-center. The information was processed in-device directly, keeping the information securely within the local network's confines but allowing a data-center administrator to determine better the exact position of failing hardware.</p>
     </section>
 
     <!-- Smart Bezel -->
     <section>
-      <h3>B. Smart bezel </h3>
-      <p>We had in our ranks a designer with some previous industrial design experience, he helped to shape the final concept of the bezel we end up using.</p>
-      <p> The concept integrated a <span id='rainbow'>255 color LED</span> strip we could use to transmit status information from the hardware back to our admin and our NFC sticker placed behind the inner side of the bezel with the required hardware information to pair.</p>
+      <h3>Solution: Smart bezel </h3>
+      <p> The concept integrated a 255 color LED strip we could use to transmit status information from the hardware back to our admin and our NFC sticker placed behind the inner side of the bezel with the required hardware information to pair.</p>
 
-      <img alt="Picture of a sheet of paper with several drawings of server faceplates" class='article-image' src='img/concept2.jpg' width="100%"  />
+      <img loading="lazy" alt="Picture of a sheet of paper with several drawings of server faceplates" class='article-image' src='img/concept2.jpg' width="100%"  />
       <figcaption>Design concepts for the bezel</figcaption>
 
-      <p>The final faceplate used a modern design language and proposed using premium materials for its construction, once paired with the management service would be able to show system information through the stip. We captured a couple of use cases for the demo that included:</p>
+      <p>The final faceplate used a modern design language and proposed using premium materials for its construction. Once paired with the management service, it would be able to show system information through the light strip. We captured a couple of use cases for the demo that included:</p>
       <ol style='margin-bottom:40pt' type="A">
         <li>Block hardware error. </li>
         <li>Software operations, like updating that is taking place in a specific piece of hardware.</li>
       </ol>
 
       <h3> A working prototype </h3>
-      <p> Thanks to a clear goal and effort from the team, delivered a working prototype of the app, the bezel functionality and a excellent pitch for our C-level executives that earned us the award for most creative in that year's hackathon.</p><p> In 2018 we were nominated to the UX Design awards - IFA Consumer Electronic's in Berlin, an international competition for user-centric design solutions that utilize state-of-the-art technologies.</p>
+      <p> Thanks to a clear goal and effort from the team, delivered a working prototype of the app, the bezel functionality, and an excellent pitch for our C-level executives that earned us the most creative award in that year's hackathon.</p><p> In 2018 we were nominated to the UX Design awards - IFA Consumer Electronic's in Berlin, an international competition for user-centric design solutions that utilize state-of-the-art technologies.</p>
 
-      <img alt="UX award ceremony in a enclosed space" class='article-image' src='img/uxaward.jpg' width="100%"  />
+      <img loading="lazy" alt="UX award ceremony in a enclosed space" class='article-image' src='img/uxaward.jpg' width="100%"  />
       <figcaption>UX Design Awards - IFA Consumer Electronic Berlin 2018</figcaption>
     </section>
 
@@ -121,7 +114,7 @@
   </main>
 
 
-  <aside>
+  <!-- <section>
     <p>Role: Team Lead / Inventor</p>
 
     <p>Team: Jason Klein, Ken Chen, Melina Maclarty, Ricky Koo, Shamant Kengeri</p>
@@ -129,7 +122,7 @@
     <p> Acknowledgements: <br> Nutanix - Most Creative 2016 <br> UX Awards Nominee Berlin 2018</p>
 
     <p>About Nutanix: Nutanix is a cloud computing software company that sells hyper-converged infrastructure (HCI) appliances and software-defined storage.</p>
-  </aside>
+  </section> -->
 
 </article>
 

@@ -31,3 +31,4 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
 
 $('.inject').text(''+ diffDays + ' days' + '');
+$('body').on('touchstart', function() {});
