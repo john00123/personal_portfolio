@@ -1,0 +1,814 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap");
+/* line 24, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_base.scss */
+html, body {
+  color: #00003c;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 31, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_base.scss */
+html, body {
+  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 41, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_base.scss */
+*, * > * {
+  box-sizing: border-box;
+}
+
+/* line 43, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_base.scss */
+*::selection {
+  color: rgba(0, 85, 255, 0.992157);
+  background-color: rgba(0, 85, 255, 0.1);
+}
+
+/* line 6, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/style.scss */
+nav {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  height: 80pt;
+  position: sticky;
+  top: 0;
+  z-index: -1;
+}
+
+/* line 15, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/style.scss */
+.pages {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  list-style: none;
+  max-width: 1480px;
+  margin: auto;
+}
+
+/* line 20, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/style.scss */
+.pages a {
+  margin-right: 20px;
+}
+
+/* line 23, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/style.scss */
+hr {
+  background-color: rgba(0, 0, 60, 0.02);
+  height: 1px;
+  border: none;
+}
+
+/* line 29, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/style.scss */
+label {
+  font-size: 11pt;
+  margin-top: 20px;
+  color: rgba(0, 0, 60, 0.4);
+}
+
+/* line 35, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/style.scss */
+.text {
+  flex-grow: 1;
+}
+
+/* line 37, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/style.scss */
+.text h3, .text p {
+  margin: 0;
+}
+
+/* line 40, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/style.scss */
+.small-card {
+  background-color: white;
+  border-radius: 4pt;
+  padding: 16pt 16pt;
+  width: 60%;
+}
+
+/* line 49, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/style.scss */
+.transition-fade {
+  transition: 0.4s;
+  opacity: 1;
+  will-change: opacity;
+}
+
+/* line 55, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/style.scss */
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+/* line 3, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+body {
+  padding: 16pt;
+}
+
+/* line 5, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.intro {
+  margin-bottom: 64pt;
+}
+
+/* line 7, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.main-section {
+  max-width: 1485px;
+  margin: auto;
+  margin-bottom: 32pt;
+  background-color: white;
+}
+
+/* line 13, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.main-section h2, .main-section p {
+  text-align: center;
+  max-width: 80ch;
+  margin: auto;
+}
+
+/* line 19, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.main-section h2 {
+  margin-bottom: 16pt;
+}
+
+/* line 23, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+mark {
+  color: rgba(0, 85, 255, 0.992157);
+  background: rgba(0, 85, 255, 0.1);
+  padding: 0 4pt;
+}
+
+/* line 30, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.articles-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  max-height: 800px;
+  width: 1485px;
+  margin: auto;
+}
+
+/* line 41, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.tile {
+  width: 475px;
+  border-radius: 8pt;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  position: relative;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: matrix(1, 0, 0, 1, 0, 0), translateZ(0);
+  display: flex;
+  overflow: hidden;
+}
+
+/* line 54, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.large {
+  height: 660px;
+  background-color: rgba(0, 0, 60, 0.02);
+}
+
+/* line 57, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.large .image-wrapper {
+  height: calc(660px - 170px);
+}
+
+/* line 60, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.medium {
+  height: 460px;
+  background-color: rgba(0, 0, 60, 0.02);
+}
+
+/* line 63, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.medium .image-wrapper {
+  height: calc(460px - 170px);
+}
+
+/* line 66, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.small {
+  flex-direction: row;
+  height: 170px;
+  background-color: rgba(0, 0, 60, 0.02);
+}
+
+/* line 71, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.small .image-wrapper {
+  width: 170px;
+  height: 170px;
+  flex-shrink: 0;
+}
+
+/* line 80, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.tile a {
+  height: 100%;
+  width: 100%;
+  color: #00003c;
+  border-radius: 8pt;
+  text-decoration: none;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+/* line 91, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.small.tile a {
+  flex-direction: row;
+}
+
+/* line 96, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.tile {
+  animation: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) both fade-in;
+}
+
+/* line 102, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.tile:nth-child(1) {
+  animation-delay: 0.125s;
+}
+
+/* line 102, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.tile:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+/* line 102, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.tile:nth-child(3) {
+  animation-delay: 0.375s;
+}
+
+/* line 102, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.tile:nth-child(4) {
+  animation-delay: 0.5s;
+}
+
+/* line 102, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.tile:nth-child(5) {
+  animation-delay: 0.625s;
+}
+
+/* line 102, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.tile:nth-child(6) {
+  animation-delay: 0.75s;
+}
+
+/* line 102, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.tile:nth-child(7) {
+  animation-delay: 0.875s;
+}
+
+/* line 102, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.tile:nth-child(8) {
+  animation-delay: 1s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 24pt, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* line 122, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.text-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 32pt;
+  height: 170px;
+  background-color: rgba(0, 0, 60, 0.04);
+  position: relative;
+  width: 100%;
+}
+
+/* line 132, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.text-wrapper h2 {
+  margin: 0;
+  font-size: 14pt;
+}
+
+/* line 133, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.text-wrapper p {
+  margin: 0;
+}
+
+/* line 139, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+.image-wrapper {
+  display: flex;
+  background-color: rgba(0, 0, 60, 0.02);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 150, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+#bezel {
+  background-color: rgba(0, 0, 60, 0.02);
+  background: url("../img/admin.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 157, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+#ef {
+  background-color: rgba(0, 85, 255, 0.992157);
+  background-image: url("../img/articles/ef.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 164, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+#font {
+  background-color: rgba(0, 85, 255, 0.992157);
+  background: url("../img/articles/font.svg");
+  background-position: center;
+}
+
+/* line 171, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+#design-system {
+  background-size: contain;
+  background: url("../img/Glass-nutanix.jpg");
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  padding: 0;
+  overflow: hidden;
+  justify-items: center;
+}
+
+/* line 180, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+#design-system video {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 184, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_main.scss */
+#design-system .box {
+  align-self: center;
+  background: rgba(0, 85, 255, 0.992157);
+  font-size: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  color: white;
+}
+
+/* line 4, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_inputs.scss */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+  position: relative;
+}
+
+/* line 11, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_inputs.scss */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+/* line 15, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_inputs.scss */
+input[type=range]:focus {
+  outline: none;
+}
+
+/* line 19, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_inputs.scss */
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  color: transparent;
+  background: transparent;
+  border-color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+/* line 31, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_inputs.scss */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 14pt;
+  width: 33%;
+  border-radius: 4pc;
+  background: rgba(0, 85, 255, 0.992157);
+  margin-top: -8px;
+  cursor: grab;
+}
+
+/* All the same stuff for Firefox */
+/* line 42, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_inputs.scss */
+input[type=range]::-moz-range-thumb, input[type=range]::-ms-thumb {
+  height: 8pt;
+  width: 33%;
+  border-radius: 4pc;
+  background: rgba(0, 85, 255, 0.992157);
+  cursor: pointer;
+}
+
+/* line 52, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_inputs.scss */
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: rgba(0, 0, 60, 0.04);
+  border-radius: 1.3px;
+}
+
+/* line 60, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_inputs.scss */
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: rgba(0, 0, 60, 0.04);
+}
+
+/* line 3, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+article, main {
+  margin: auto;
+}
+
+/* line 5, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+article {
+  padding: 8pt;
+  max-width: 980px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+/* line 11, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* line 13, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+main {
+  max-width: 80ch;
+  flex-shrink: none;
+}
+
+/* line 21, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+img, video, .block {
+  overflow: hidden;
+  border-radius: 8pt;
+  margin: 28pt 0;
+  background-color: rgba(0, 0, 60, 0.04);
+}
+
+/* line 28, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+img {
+  margin-top: 8pt;
+}
+
+/* line 30, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  height: 280pt;
+  padding: 16pt;
+}
+
+/* line 41, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+h1 {
+  margin-bottom: 0;
+  font-size: 36pt;
+  font-weight: 500;
+  letter-spacing: -1.2;
+}
+
+/* line 48, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+h2 {
+  font-size: 16pt;
+  font-weight: 400;
+  margin-bottom: 8pt;
+}
+
+/* line 54, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+h3 {
+  font-size: 1.5em;
+}
+
+/* line 61, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+ol, ul {
+  margin-top: 8;
+  margin-bottom: 16pt;
+  padding-left: 32pt;
+  border-left: 3px solid rgba(0, 0, 60, 0.04);
+}
+
+/* line 68, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+p, li {
+  color: rgba(0, 0, 60, 0.7);
+  font-weight: 300;
+  font-size: 1.04em;
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+
+/* line 76, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+li:not(:last-child) {
+  margin-bottom: 8;
+}
+
+/* line 81, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+.description, figcaption {
+  color: rgba(0, 0, 60, 0.4);
+}
+
+/* line 82, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+figcaption {
+  margin: -16pt 0 24pt 0;
+}
+
+/* line 83, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+article p {
+  margin-bottom: 20pt;
+}
+
+/* line 88, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+main a {
+  color: rgba(0, 85, 255, 0.992157);
+  position: relative;
+  text-decoration: none;
+}
+
+/* line 94, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+main a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 85, 255, 0.992157);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  transform-origin: left;
+  -webkit-transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+
+/* line 112, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_articles.scss */
+main a:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* line 3, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_font.scss */
+.thin {
+  font-weight: 200;
+}
+
+/* line 4, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_font.scss */
+.regular {
+  font-weight: 400;
+}
+
+/* line 5, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_font.scss */
+.normal {
+  font-weight: 500;
+}
+
+/* line 6, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_font.scss */
+.semibold {
+  font-weight: 600;
+}
+
+/* line 7, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_font.scss */
+.bold {
+  font-weight: 800;
+}
+
+/* line 9, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_font.scss */
+.character-display, .type-showcase {
+  font-family: "Nutanix_Soft", sans-serif !important;
+}
+
+/* line 15, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_font.scss */
+.type-showcase {
+  margin: none;
+  line-height: 2;
+  font: 17pt/2 'Nutanix_Soft', sans-serif;
+}
+
+/* line 21, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_font.scss */
+.type-showcase ul {
+  padding: 0;
+  border: none;
+}
+
+/* line 24, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_font.scss */
+.type-showcase ul li {
+  list-style: none;
+}
+
+/* line 30, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_font.scss */
+.character-display {
+  margin-top: -40px;
+  font-size: 80px;
+  letter-spacing: -1.5;
+  will-change: font-size;
+  transition: font-size 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* line 38, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_font.scss */
+.slider {
+  margin: 0;
+  bottom: 16pt;
+  padding: 0 16pt;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+/* line 46, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_font.scss */
+.slider input {
+  margin: 0 16pt;
+}
+
+/* line 3, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_bezel.scss */
+#rainbow {
+  background: linear-gradient(to right, #1CD760, blue, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* line 9, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_bezel.scss */
+.phone {
+  display: flex;
+  background: url("../img/blank.png");
+  background-size: 350px;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  margin-bottom: -40px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* line 22, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_bezel.scss */
+.phone h2 {
+  color: white;
+}
+
+/* line 29, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_bezel.scss */
+dialog {
+  position: absolute;
+  bottom: 0;
+  padding: 30px;
+  border-radius: 5pt 5pt 0 0;
+  background-color: white;
+  height: 275px;
+  width: 300px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  align-self: center;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* line 41, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_bezel.scss */
+dialog::before {
+  content: 'd';
+  color: transparent;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 -20px;
+  height: 15px;
+  border-radius: 5pt 5pt 0 0;
+  margin-top: -45px;
+  z-index: 1;
+}
+
+@media (max-width: 1000px) {
+  /* line 5, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  main {
+    flex-direction: column;
+  }
+  /* line 6, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  aside {
+    display: none;
+  }
+  /* line 8, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  .type-showcase li {
+    font-size: 13pt;
+  }
+}
+
+@media (max-width: 1600px) {
+  /* line 17, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  .pages, .main-section, .articles-grid {
+    max-width: 960px;
+  }
+  /* line 21, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  .articles-grid {
+    max-height: 1300px;
+    width: 960px;
+  }
+  /* line 25, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  #code {
+    max-height: 1400px;
+  }
+  /* line 26, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  #code .tile:nth-child(1) {
+    order: 5;
+  }
+  /* line 27, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  #code .tile:nth-child(3) {
+    order: 4;
+  }
+}
+
+@media (max-width: 1200px) {
+  /* line 33, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  .tile {
+    width: 328px;
+  }
+  /* line 36, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  .pages, .main-section, .articles-grid {
+    max-width: 692px;
+  }
+  /* line 40, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  .articles-grid {
+    width: 692px;
+  }
+  /* line 42, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  #design-system {
+    grid-template-columns: repeat(auto-fill, 54px);
+  }
+  /* line 45, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  .box {
+    width: 39px;
+    height: 39px;
+  }
+  /* line 50, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  .small {
+    height: 460px;
+  }
+  /* line 51, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  .tile.small a {
+    flex-direction: column;
+  }
+  /* line 52, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  .small .image-wrapper {
+    height: calc(460px - 170px);
+    width: 100%;
+  }
+  /* line 56, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  .intro {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  /* line 63, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  .tile {
+    display: block;
+    margin-right: 0;
+    width: 100%;
+  }
+  /* line 68, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  .pages, .main-section, .articles-grid {
+    max-width: auto;
+  }
+  /* line 72, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  .articles-grid {
+    max-height: none;
+    width: auto;
+  }
+  /* line 77, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  #code {
+    max-height: none;
+  }
+  /* line 81, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  .tile.small a {
+    flex-direction: column;
+  }
+  /* line 83, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  .small .image-wrapper, .medium .image-wrapper {
+    height: calc(660px - 170px);
+    width: 100%;
+  }
+  /* line 87, ../../../../../../../../../../../../../Users/john/Library/Mobile Documents/com~apple~CloudDocs/Web/personal_portfolio/css/_mediaqueries.scss */
+  .small, .medium {
+    height: 660px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
